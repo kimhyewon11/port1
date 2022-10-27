@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include ("common/header.ejs")%>
+    <div id="container">
+        <div class="join login">
+            <div class="center">
+                <div class="boxWrap">
+                    <div class="box1">
+                        <h2>Create an account</h2>
+                        <div class="btns">
+                            <a class="log" href="login">LOGIN</a>
+                            <a class="joinbtn on" href="join">REGISTER</a>
+                        </div>
+                        <form id="join_form" action="/joindb" method="post">
+                            <input type="text" name="username" placeholder="Full Name">
+                            <input type="text" name="useremail" placeholder="Email Address">
+                            <input type="text" name="userpass" placeholder="Password">
+                            <button type="submit">REGISTER</button>
+                        </form>
+                        <p class="already">Already a member?<a href="/login">Login</a> here</p>
+                    </div>
+                    <div class="box2">
+                        <div class="bg"></div>
+                        <div class="textWrap">
+                            <p class="top">Housy</p>
+                            <p class="bot">WELCOME TO HOUSY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ("common/footer.ejs")%>
+</body>
+</html>

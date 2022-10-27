@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 수정 페이지</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include ("common/header.ejs")%>
+    <div id="container">
+        <div class="cont1">
+            <%- include ("common/banner.ejs")%>
+            <div class="textWrap">
+                <p class="m_text">CONTACT US</p>
+                <p class="s_text">Index/Contact Us</p>
+            </div>
+        </div>
+        <div class="brdinsert_cont2">
+            <div class="center">
+                <h2>CONTACT US</h2>
+                <form action="/update" method="post">
+                    <div class="Wrap">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="Wrap">
+                        <input type="text" name="subject" placeholder="Subject">
+                        <input type="text" name="number" placeholder="Number">
+                    </div>
+                    <div class="Wrap">
+                        <input type="file" name="filetest" placeholder="file">
+                        <button type="submit">submit</button>
+                    </div>
+                    <textarea name="msg" placeholder="Write message"></textarea>
+                    <div class="btnWrap">
+                        <button type="submit">SEND MESSAGE</button>
+                        <a href="/list">CANCEL</a>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <%- include ("common/footer.ejs")%>
+</body>
+</html>
