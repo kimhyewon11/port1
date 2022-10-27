@@ -38,17 +38,93 @@ MongoClient.connect("mongodb+srv://admin:qwer1234@testdb.mopkvcj.mongodb.net/?re
 });
 
 app.get("/",function(req,res){
-    res.render("index");
+    res.render("index",{userdata:req.user});
 });
 app.get("/intro",function(req,res){
-    res.render("intro");
+    res.render("intro",{userdata:req.user});
 });
 app.get("/join",function(req,res){
+    res.render("join",{userdata:req.user});
+});
+
+
+app.post("/memberjoin",function(req,res){
     res.render("join");
+    db.collection("port1_join").findOne({joinid:req.body.id},function(err,result){
+        if(result){
+            res.send("<script>alert('이미 가입된 아이디 입니다'); location.href='/join' </script>")
+        }
+        else { 
+            db.collection("port1_count").findOne({name:"회원정보"},function(err,result){
+                db.collection("port1_join").insertOne({
+                    joinno:result.joincount+1,
+                    joinname:req.body.username,
+                    joinemail:req.body.useremail,
+                    joinpass:req.body.userpass,
+                },function(err,result){
+                    db.collection("port1_count").updateOne({name:"회원정보"},{$inc:{joincount:1}},function(err,result){
+                        res.send("<script>alert('회원가입'); location.href='/login' </script>")
+                    });
+                });
+            });
+        }
+    });
 });
 app.get("/login",function(req,res){
-    res.render("login");
+    res.render("login",{userdata:req.user});
 });
+
+app.post("/memberlogin",passport.authenticate('local', {failureRedirect : '/fail'}),
+function(req,res){
+    res.redirect("/");
+});
+
+
+passport.use(new LocalStrategy({
+    usernameField: 'useremail',//login.ejs 에서 입력한 아이디의 name 값
+    passwordField: 'userpass', //login.ejs 에서 입력한 비밀번호의 name 값
+    session: true, //세션 이용할 것입니까 ?
+    passReqToCallback: false, //아이디와 비번 말고도 다른항목들 더 검사할 것인지 여부 
+  }, function (useremail, userpass, done) { //userid userpass 는 입력한 input 값 담는 변수 (작명가능)
+    console.log(useremail,userpass)
+    db.collection('port1_join').findOne({ joinemail: useremail }, function (err, result) {
+      if (err) return done(err)
+  
+      if (!result) return done(null, false, { message: '존재하지않는 아이디' })
+      if (userpass== result.joinpass) {
+        return done(null, result)
+      } else {
+        return done(null, false, { message: '비밀번호 틀림' })
+      }
+    })
+  }));
+
+  //데이터베이스에 있는 아이디와 비번이 일치하면 
+  //세션을 생성하고 해당 아이디와 비번을 기록하여 저장하는 작업
+  passport.serializeUser(function (user, done) {
+    done(null, user.joinemail) //데이터 베이스에 있는 아이디가 저장되어있는 프로퍼티 명 기술 
+  });
+
+
+
+  passport.deserializeUser(function (joinemail, done) { 
+    //데이터베이스에 있는 로그인 했을 때 아이디만 불러와서
+    // 다른 페이지에서도 세션을 사용할 수 있도록 처리 
+    // done(null, {}) -- 다른 페이지에도 사용할 수 있도록 만든 함수
+    db.collection("port1_join").findOne({joinemail:joinemail},function(err,result){
+        done(null,result); //데이터베이스에서 가지고온 아이디를 세션에 넣어서 다른페이지들에 전달 
+    })
+  });
+
+  app.get("/logout",function(req,res){
+    req.session.destroy(function(err){
+        res.clearCookie("connect.sid");
+        res.redirect("/");
+    })
+});
+
+
+
 app.get("/mypage",function(req,res){
     res.render("mypage");
 });
