@@ -1,0 +1,357 @@
+@media screen and (max-width:1200px)
+{
+    #header { 
+        .h_top { 
+            .center { 
+                width:80%;
+                .log { 
+                    margin-left: 83%;
+                }
+            }
+        }
+        .h_bot { 
+            .center { 
+                width: 80%;
+            }
+        }
+    }
+    #container { 
+        .main_cont1 { 
+            height: 840px;
+        }
+        .main_cont2 { 
+            width: 100%;
+            .center { 
+                width: 80%;
+                .lookingWrap { 
+                    img{ 
+                        width: 440px;
+                    }
+                    .boxWrap { 
+                        .box { 
+                            width: 450px;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont3 { 
+            .center { 
+                width: 80%;
+                .slider { 
+                    width: 100%;
+                    .view { 
+                        .s_box { 
+                            width: 210px;
+                            margin: 0 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont4 {
+            .center { 
+                width: 80%;
+                .placeWrap {
+                    .place { 
+                        &:nth-child(4) {
+                            width:613px ;
+                        }
+                        width: 300px;
+                        margin:0 7px 20px;
+                       
+                    }
+                }
+            }
+        }
+        .main_cont5{
+            .center { width: 80%;}
+        }
+        .main_cont6 {
+            .center { 
+                width: 80%;
+                .personboxWrap { 
+                    .person_box { 
+                        width: 215px;
+                       
+                    }
+                }
+            }
+        }
+        .main_cont7 {
+            .center { 
+                width: 80%;
+                .reviewWrap {
+                    .reviewbox { 
+                        width:290px ;
+                    }
+                }
+            }
+        }
+        .main_cont8 {
+            .center { 
+                width: 80%;
+                .blogboxWrap { 
+                    .blogWrap { 
+                        width: 290px;
+                    >img { 
+                        top: 160px;
+                    }
+                    }
+                }
+            }
+        }
+    }
+    #footer { 
+        .f_top {
+            .center { 
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px)
+{
+    #header { 
+        .h_top { 
+            display: none;
+        }
+        .h_bot { 
+            .center { 
+                width: 70%;
+                .gnb { 
+                    display: none;
+                }
+                .subMenu { 
+                    display: flex;
+                }
+            }
+        }
+    }
+    #container { 
+        .main_cont2 { 
+            .center { 
+                width: 70%;
+                .lookingWrap { 
+                    img{ 
+                        display: none;                    
+                    }
+                    .boxWrap { 
+                        .box { 
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont3 { 
+            .center { 
+                width: 70%;
+                .slider { 
+                    width: 100%;
+                    .view { 
+                        width: 800%;
+                        .s_box { 
+                            width: 310px;
+                            margin: 0 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont4 {
+            .center { 
+                width: 70%;
+                .placeWrap {
+                    .place { 
+                        &:nth-child(4) {
+                            display: none;
+                        }
+                        width: 310px;
+                        margin:0 7px 20px;
+                    }
+                }
+            }
+        }
+        .main_cont5{
+            .center {
+                 width: 70%;
+                .countboxWrap { 
+                    flex-wrap: wrap;
+                   .countbox { 
+                     width: 310px;
+                     margin-bottom: 10px;
+                   }
+                }
+            }
+        }    
+        .main_cont6 {
+            .center { 
+                width: 70%;
+                .personboxWrap { 
+                    .person_box { 
+                        width: 320px;
+                        &:nth-child(3) { display: none;}
+                        &:nth-child(4) { display: none;}
+                    }
+                }
+            }
+        }
+        .main_cont7 {
+            .center { 
+                width: 70%;
+                .reviewWrap {
+                    .reviewbox { 
+                        width:320px ;
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont8 {
+            .center { 
+                width: 70%;
+                .blogboxWrap { 
+                    .blogWrap { 
+                        width: 320px;
+                        &:last-child {
+                            display: none;
+                        }
+                    >img { 
+                        top: 160px;
+                    }
+                    }
+                }
+            }
+        }
+    }
+    #footer { 
+        .f_top {
+            .center { 
+                width: 70%;
+                .boxWrap { 
+                    flex-wrap:wrap ;
+
+                    .box { 
+                        width: 50%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:768px)
+{
+    
+        #header { 
+            .h_bot { 
+                .center { 
+                    width: 68%;
+                }
+            }
+        }
+        #container { 
+            .main_cont2 { 
+                .center { 
+                    padding: 60px 0;
+                    width: 68%;
+                }
+            }
+            .main_cont3 { 
+                .center { 
+                    width: 68%;
+                    padding: 65px 0;
+                    .slider { 
+                        .view { 
+                            .s_box { 
+                                width: 500px;
+                                img { 
+                                    height: 340px;
+                                }
+                            }
+                        }
+                        .circlebtn { 
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .main_cont4 {
+                .center { 
+                    width: 68%;
+                    padding: 50px 0;
+                    .placeWrap {
+                        .place { 
+                            width: 240px;
+                            margin:0 5px 15px;
+                        }
+                    }
+                }
+            }
+            .main_cont5{
+                .center {
+                    padding: 50px 0;
+                     width: 37%;
+                    .countboxWrap { 
+                       .countbox { 
+                         width: 230px;
+                         margin-bottom: 25px;
+                       }
+                    }
+                }
+            }   
+            .main_cont6 {
+                .center { 
+                    width: 68%;
+                    padding: 65px 0;
+                    .personboxWrap { 
+                        .person_box { 
+                            width: 100%;
+                            &:nth-child(2) { display: none;}
+                            img {
+                                height:420px ;
+                            }
+
+                        }
+                    }
+                }
+            } 
+            .main_cont7 {
+                .center { 
+                    width: 68%;
+                    .reviewWrap {
+                        .reviewbox { 
+                            width:100% ;
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .main_cont8 {
+                .center { 
+                    width: 68%;
+                    .blogboxWrap { 
+                        .blogWrap { 
+                            width: 100%;
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        >img { 
+                            top: 300px;
+                        }
+                        }
+                    }
+                }
+            }
+        }   
+}
+

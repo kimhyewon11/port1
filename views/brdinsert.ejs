@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html><% if (!userdata) {%>
+    <script>
+        alert("비회원은 접근할 수 없는 페이지입니다")
+        location.href = "/login";
+    </script>
+<% } %>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,18 +53,17 @@
                         <p class="context">info@themevessel.com</p>
                     </div>
                 </div>
-                <form action="/add" method="post">
+                <form action="/add" method="post" enctype="multipart/form-data">
                     <div class="Wrap">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="Email">
+                        <input readonly type="text" name="name" placeholder="Name" value="<%- userdata.joinname%>">
+                        <input readonly type="text" name="email" placeholder="Email" value="<%- userdata.joinemail%>">
                     </div>
                     <div class="Wrap">
                         <input type="text" name="subject" placeholder="Subject">
                         <input type="text" name="number" placeholder="Number">
                     </div>
                     <div class="Wrap">
-                        <input type="file" name="filetest" placeholder="file">
-                        <button type="submit">submit</button>
+                        <input type="file" name="filetest" placeholder="file" >
                     </div>
                     <textarea name="msg" placeholder="Write message"></textarea>
                     <div class="btnWrap">
@@ -69,5 +74,6 @@
             </div>
     </div>
     <%- include ("common/footer.ejs")%>
+    
 </body>
 </html>

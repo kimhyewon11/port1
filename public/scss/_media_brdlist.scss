@@ -1,0 +1,59 @@
+@media screen and (max-width:1200px)
+{
+    #container { 
+        .brdlist_cont2 {
+            .center {
+                width: 80%;
+                .boxes { 
+                    .box {
+                        width: 290px;
+                        height: 100%;
+                        .imgs { 
+                            height: 195px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px)
+{
+    #container { 
+        .brdlist_cont2 {
+            .center {
+                width: 71%;
+                .boxes { 
+                    .box {
+                        width: 330px;
+                        height: 100%;
+                        .imgs { 
+                            height: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    #container { 
+        .brdlist_cont2 {
+            .center {
+                width: 68%;
+                .boxes { 
+                    .box {
+                        width: 510px;
+                        height: 100%;
+                        .imgs { 
+                            height: 340px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+#header { 
+    .h_top { 
+        background-color: #274abb;
+        display: flex;
+        justify-content: center;
+        .center { 
+            width: 1120px;
+            .log { 
+                display: flex;
+                width:200px ;
+                margin-left: 89%;
+                li {
+                    line-height: 40px;
+                    margin-left: 20px;
+                    flex-direction: end;
+                    a {
+                        color:#fff ;
+                        font-size: 13px;
+                        span {
+                            color:#fff ;
+                            font-size: 15px;
+                            position: relative;
+                            top: 2px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .h_bot { 
+        display: flex;
+        justify-content: center;
+
+        .center { 
+            width: 1120px;
+            display: flex;
+            position: relative;
+            .logo { 
+                margin-right: 60px;
+                line-height: 90px;
+                a { 
+                    font-size: 23 px;
+                    color: #000;
+                }
+            }
+            .gnb { 
+                display: flex;
+                justify-content: space-between;
+                
+                li {
+                    line-height: 90px;
+                    margin:0 20px ;
+                    &:last-child {
+                        margin: 0;
+                    }
+                    a { 
+                        color: #000;
+                        font-size: 14px;
+                        span {
+                            color: #000;
+                            position: relative;
+                            top: 7px;
+                         }
+                         &:hover {
+                            color: #274abb;
+                            span { color: #274abb;}
+                         }
+                    }
+                    a.on {
+                        color: #274abb;
+                            span { color: #274abb;}
+                    }
+                }
+                
+            }
+            .subMenu { 
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 35px;
+                height: 25px;
+                >span { 
+                    font-size: 20px;
+                    position: absolute;
+                    width: 35px;
+                    height: 2px;
+                    background-color: #555;
+                }
+                .one { 
+                    top: 0;
+                }
+                .two  {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    
+                }
+                .three { 
+                    bottom: 1px;
+                }
+            }
+        }
+    }
+}

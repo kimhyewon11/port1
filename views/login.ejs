@@ -25,8 +25,9 @@
                         </div>
                         <form id="login_form" action="/memberlogin" method="post">
                             <input type="text" name="useremail" placeholder="Email Address">
-                            <input type="text" name="userpass" placeholder="Password">
+                            <input type="password" name="userpass" placeholder="Password">
                             <button type="submit">LOGIN</button>
+                            <button type="botton">CANCEL</button>
                         </form>
                         <p class="already">Don't have an account?<a href="/join">Register</a> here</p>
                     </div>
@@ -42,5 +43,6 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
+    
 </body>
 </html>

@@ -26,8 +26,9 @@
                         <form id="join_form" action="/memberjoin" method="post">
                             <input type="text" name="username" placeholder="Full Name">
                             <input type="text" name="useremail" placeholder="Email Address">
-                            <input type="text" name="userpass" placeholder="Password">
+                            <input type="password" name="userpass" placeholder="Password">
                             <button type="submit">REGISTER</button>
+                            <button type="button">CANCEL</button>
                         </form>
                         <p class="already">Already a member?<a href="/login">Login</a> here</p>
                     </div>
@@ -43,5 +44,6 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
+    
 </body>
 </html>

@@ -1,0 +1,51 @@
+@media screen and (max-width:1200px)
+{
+    #container { 
+        .blog_cont2 { 
+            .center { 
+                width: 78%;
+            
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px)
+{
+    #container { 
+        .blog_cont2 { 
+            .center { 
+                width: 70%;
+                img { 
+                    height: 385px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px)
+{
+    #container { 
+        .blog_cont2 { 
+            .center { 
+                width: 68%;
+                img { 
+                    height: 280px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:580px)
+{
+    #container { 
+        .blog_cont2 { 
+            .center { 
+                width: 94%;
+                img { 
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

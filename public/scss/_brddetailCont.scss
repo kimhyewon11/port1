@@ -1,0 +1,107 @@
+.brddetail { 
+    display: flex;
+    justify-content: center;
+    .center { 
+        width: 1000px;
+        h2 { 
+            text-align: center;
+            margin: 90px 0 40px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px auto;
+            .Wrap { 
+                width: 45%;
+                div { 
+                    color: #555;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 20px 0;
+                }
+                p { 
+                    border-bottom:1px solid #888 ;
+                    font-size: 14px;
+                    color: #555;
+                }
+            }
+        }
+        .fileWrap { 
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto;
+            .filebox {
+                width: 45%;
+                margin-bottom: 30px;
+                p { 
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #555;
+                    margin: 30px 0 20px;
+                }
+                .file { 
+                    width: 93%;
+                    margin: 0;
+                    border: 1px solid #888;
+                    height: 260px;
+                    color: #555;
+                    font-size: 13px;
+                    padding: 10px;
+                    >img { 
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .textboxWrap {
+                width: 45%;
+                margin: 0;
+                .msg { 
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #555;
+                    margin: 30px 0 20px;
+                }
+                .textbox { 
+                    width: 93%;
+                    margin: 0;
+                    border: 1px solid #888;
+                    height: 260px;
+                    color: #555;
+                    font-size: 13px;
+                    padding: 10px;
+                }
+            }
+        }
+        .list { 
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            width: 90px;
+            line-height: 40px;
+            color: #fff;
+            background-color: #888;
+            border-radius: 5px;
+            margin-bottom: 100px;}
+        .btnWrap { 
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 200px;
+            >a { 
+                text-align: center;
+                display: block;
+                width: 90px;
+                line-height: 40px;
+                color: #fff;
+                background-color: #888;
+                border-radius: 5px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ const express = require("express");
 const MongoClient = require("mongodb").MongoClient;
 const moment = require("moment");
 const port = process.env.PORT || 8000;
+const multer  = require('multer') ; // 파일업로드 라이브러리 multer
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -49,8 +50,8 @@ app.get("/join",function(req,res){
 
 
 app.post("/memberjoin",function(req,res){
-    res.render("join");
-    db.collection("port1_join").findOne({joinid:req.body.id},function(err,result){
+    
+    db.collection("port1_join").findOne({joinid:req.body.useremail},function(err,result){
         if(result){
             res.send("<script>alert('이미 가입된 아이디 입니다'); location.href='/join' </script>")
         }
@@ -126,20 +127,86 @@ passport.use(new LocalStrategy({
 
 
 app.get("/mypage",function(req,res){
-    res.render("mypage");
+    res.render("mypage",{userdata:req.user});
 });
 app.get("/blog",function(req,res){
-    res.render("blog");
+    res.render("blog",{userdata:req.user});
 });
 app.get("/brdinsert",function(req,res){
-    res.render("brdinsert");
+    res.render("brdinsert",{userdata:req.user});
 });
-app.get("/brddetail",function(req,res){
-    res.render("brddetail");
+
+
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/upload')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname = Buffer.from(file.originalname, 'latin1').toString('utf8'));// = 이후 --> 한글로 된 파일이름 그대로 인식하는 코드
+}
+  });
+  
+  const upload = multer({ storage: storage });
+
+
+app.post("/add",upload.single('filetest'),function(req,res){
+    let times = moment().format("YYYY.MM.DD");
+
+    db.collection("port1_count").findOne({name:"게시판"},function(err,result){
+        db.collection("port1_board").insertOne({
+            brdid:result.boardcount+1,
+            brdname:req.body.name,
+            brdtitle:req.body.subject,
+            brdemail:req.body.email,
+            brdcontext:req.body.msg,
+            brdnumber:req.body.number,
+            brddate : times,
+            brdfile:req.file.originalname
+        },function(err,result){
+            db.collection("port1_count").updateOne({name:"게시판"},{$inc:{boardcount:1}},function(err,result){
+                res.redirect("/brdlist");
+            });
+        });
+    });
+})
+
+
+app.get("/brddetail/:no",function(req,res){
+    db.collection("port1_board").findOne({brdid:Number(req.params.no)},function(err,result){
+        res.render("brddetail",{brddata:result,userdata:req.user});
+    });
 });
+
+
 app.get("/brdlist",function(req,res){
-    res.render("brdlist");
+    db.collection("port1_board").find().toArray(function(err,result){
+        res.render("brdlist",{brddata:result,userdata:req.user});
+    })
 });
-app.get("/brduptview",function(req,res){
-    res.render("brdupdateview");
+app.get("/brduptview/:no",upload.single('filetest'),function(req,res){
+    db.collection("port1_board").findOne({brdid:Number(req.params.no)},function(err,result){
+        res.render("brdupdateview",{brddata:result,userdata:req.user});
+    })
+});
+
+//수정한 데이터 post요청으로 db에 생성
+app.post("/update",upload.single('filetest'),function(req,res){
+    db.collection("port1_board").updateOne({brdid:Number(req.body.id)},{$set:{
+        brdtitle:req.body.subject,
+        brdname:req.body.name,
+        brdcontext:req.body.msg,
+        brdemail:req.body.email,
+        brdnumber:req.body.number,
+        brdfile:req.file.originalname
+    }},function(err,result){
+        res.redirect("/brddetail/"+req.body.id);
+    });
+});
+
+app.get("/delete/:no",function(req,res){    
+    //데이터베이스에 접근해서 ex6_board에 해당 게시글 번호에 객체만 지움. 
+    db.collection("port1_board").deleteOne({brdid:Number(req.params.no)},function(err,result){
+        res.redirect("/brdlist");//데이터 삭제후 게시글 목록페이지로 이동
+    });
 });

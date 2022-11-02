@@ -1,0 +1,60 @@
+@media screen and (max-width:1200px)
+{
+    #container { 
+        .brddetail { 
+            
+            .center { 
+                width: 80%;
+            }
+        }
+    }
+   
+}
+@media screen and (max-width:1000px)
+{
+    #container { 
+        .brddetail { 
+            
+            .center { 
+                width: 72%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px)
+{
+    #container { 
+        .brddetail { 
+            
+            .center { 
+                width: 68%;
+                .row {
+                    flex-direction: column;
+                    .Wrap { 
+                        width: 100%;
+                    }
+                }
+                .fileWrap { 
+                    flex-direction: column;
+                    .filebox {
+                        width: 100%;
+                    }
+                    .textboxWrap {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:580px)
+{
+    #container { 
+        .brddetail { 
+            .center { 
+                width: 94%;
+            }
+        }
+    }
+}

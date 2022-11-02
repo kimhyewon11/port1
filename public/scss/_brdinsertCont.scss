@@ -1,0 +1,95 @@
+.brdinsert_cont2 { 
+    display: flex;
+    justify-content: center;
+    .center { 
+        width: 1120px;
+        h2 { 
+            text-align: center;
+            margin:110px 0 25px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .sub_t { 
+            text-align: center;
+            margin-bottom: 45px;
+            font-size: 14px;
+            color: #555;
+        }
+        .infoWrap { 
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            .info { 
+                span {
+                    color: #555;
+                    font-size: 25px;
+                }
+                .tit {
+                    color: #555;
+                    font-weight: 500;
+                    font-size: 14px;
+                    margin: 18px 0 15px;
+                }
+                .context {
+                    color: #555;
+                    font-size: 14px;
+                    margin-bottom: 55px;
+                }
+            }
+        }
+        form { 
+            width: 735px;
+            margin: 0 auto;
+            .Wrap { 
+                display: flex;
+                justify-content: space-between;
+                input { 
+                    border:1px solid #eee;
+                    line-height: 45px;
+                    width: 330px;
+                    margin-bottom: 20px;
+                    padding-left:20px;
+                    font-size: 14px;
+                    
+                }
+                
+            }
+            textarea {
+                width: 693px;
+                height: 240px;
+                border:1px solid #eee;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .btnWrap { 
+                display: flex;
+                justify-content: center;
+                >button { 
+                    display: block;
+                    margin:0 10px 62px ;
+                    width: 168px;
+                    font-size: 13px;
+                    line-height:45px ;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #274aba;
+                }
+                >a { 
+                    display: block;
+                    margin:0 10px 62px ;
+                    width: 168px;
+                    font-size: 13px;
+                    line-height:45px ;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #aaa;
+                    text-align: center;
+                }
+            }
+            
+        }
+        
+    }
+}

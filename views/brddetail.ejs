@@ -1,3 +1,11 @@
+<% if (!userdata) {%>
+    <script>
+        alert("비회원은 접근할 수 없는 페이지입니다")
+        location.href = "/login";
+    </script>
+<% } %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,38 +30,42 @@
                 <h2>Contact Detail</h2>
                 <div class="row">
                     <div class="Wrap">
-                        <div class="auther">Name</div>
+                        <div class="auther"><%-brddata.brdname%></div>
                         <p></p>
                     </div>
                     <div class="Wrap">
-                        <div class="email">Email</div>
+                        <div class="email"><%-brddata.brdemail%></div>
                         <p></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="Wrap">
-                        <div class="subject">subject</div>
+                        <div class="subject"><%-brddata.brdtitle%></div>
                         <p></p>
                     </div>
                     <div class="Wrap">
-                        <div class="number">number</div>
+                        <div class="number"><%-brddata.brdnumber%></div>
                         <p></p>
                     </div>
                 </div>
                 <div class="fileWrap">
                     <div class="filebox">
                         <p>File</p>
-                        <div class="file"></div>
+                        <div class="file"><img src="/img/<%-brddata.brdfile%>"></div>
                     </div>
                     <div class="textboxWrap">
-                        <p class="msg">Message</p>
-                        <div class="textbox"></div>
+                        <p class="msg">message</p>
+                        <div class="textbox"><%-brddata.brdcontext%></div>
                     </div>
                 </div>
-                <div class="btnWrap">
-                    <a class="upt" href="/brduptview">update</a>
-                    <a class="list" href="/brdlist">list</a>
-                </div>
+                
+                <% if(userdata.joinemail === brddata.brdemail) {%>
+                    <div class="btnWrap">
+                        <a class="upt" href="/brduptview/<%-brddata.brdid%>">update</a>
+                        <a class="del" href="/delete/<%-brddata.brdid%>">delete</a>
+                    </div>
+                <% } %>    
+                <a class="list" href="/brdlist">list</a>
             </div>
         </div>
     </div>
