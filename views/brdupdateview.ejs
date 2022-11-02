@@ -36,12 +36,12 @@
                 <form action="/update" method="post"  enctype="multipart/form-data">
                     <div class="Wrap">
                         <input type="hidden" name="id" value="<%- brddata.brdid %>" >
-                        <input type="text" name="name" placeholder="Name" readonly value="<%- brddata.brdname%>">
-                        <input type="text" name="email" placeholder="Email" readonly value="<%- brddata.brdemail%>">
+                        <input readonly type="text" name="name" placeholder="Name" readonly value="<%- brddata.brdname%>">
+                        <input readonly type="text" name="email" placeholder="Email" readonly value="<%- brddata.brdemail%>">
                     </div>
                     <div class="Wrap">
                         <input type="text" name="subject" placeholder="Subject" value="<%- brddata.brdtitle%>">
-                        <input type="text" name="number" placeholder="Number" value="<%- brddata.brdnumber%>">
+                        <input readonly type="text" name="number" placeholder="Number" value="<%- brddata.brdnumber%>">
                     </div>
                     <div class="Wrap">
                         <input type="file" name="filetest" placeholder="file" value="<%- brddata.brdfile%>">

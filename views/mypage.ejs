@@ -31,11 +31,39 @@
         <div class="mypage_cont">
             <h2 class="title">My Account</h2>
             <form action="/myupdate" method="post">
-                <input readonly type="text" name="name" placeholder="" value="<%-userdata.joinname%>">
+                <div class="Wrap">
+                    <label for="name">Your Name</label>
+                    <input readonly type="text" name="name" placeholder="" value="<%-userdata.joinname%>">
+                </div>
+                <div class="Wrap">
+                    <label for="prepass">Preview Password</label>
+                    <input  type="text" name="prepass"   placeholder="Preview Password">
+                </div>
+                <div class="Wrap">
+                    <label for="uptpass">Update Password</label>
+                    <input type="text" name="uptpass"   placeholder="Update Password">
+                </div>
+                <div class="Wrap">
+                    <label for="title">Your Title</label>
                 <input  type="text" name="title" placeholder="Your title" value="">
-                
+                </div>
+                <div class="Wrap">
+                    <label for="phone">Phone</label>
+                <input  type="text" name="phone" placeholder="Phone" value="<%-userdata.joinphone%>">
+                </div>
+                <div class="Wrap">
+                    <label for="email">Email</label>
+                    <input readonly type="text" name="email" placeholder="Email" value="<%-userdata.joinemail%>">
+                </div>
+                <div class="Wrap">
+                    <label for="personalInfo">Personal Info</label>
+                    <textarea  name="personalInfo">Personal Info</textarea>
+                </div>
+                <button type="submit">SAVE CHANGES</button>
             </form>
         </div>
+       
+       
     </div>
     <%- include ("common/footer.ejs")%>
 </body>

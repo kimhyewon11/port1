@@ -129,6 +129,24 @@ passport.use(new LocalStrategy({
 app.get("/mypage",function(req,res){
     res.render("mypage",{userdata:req.user});
 });
+
+app.post("/myupdate",function(req,res){
+    if(req.body.prepass === req.user.joinpass){
+        db.collection("port1_join").updateOne({joinemail:req.user.joinemail},{$set:{
+            joinpass:req.body.uptpass,
+            jointitle:req.body.title,
+            joinphone:req.body.phone
+        }},function(err,result){
+            res.send("<script>alert('마이페이지 수정 완료'); location.href='/'; </script>",)
+        });
+    }
+    else { 
+        res.send("<script>alert('기존 비번과 일치하지 않음'); location.href='/mypage'; </script>")
+    }
+});
+
+
+
 app.get("/blog",function(req,res){
     res.render("blog",{userdata:req.user});
 });
@@ -184,6 +202,31 @@ app.get("/brdlist",function(req,res){
         res.render("brdlist",{brddata:result,userdata:req.user});
     })
 });
+
+//게시글 검색 기능
+app.get("/search",function(req,res){
+    let test = [
+        {
+          $search: {
+            index: "searchport1",
+            text: {
+              query: req.query.searchResult,
+              path: req.query.searchCategory
+            }
+          }
+        },
+        {
+            $sort:{brdid:1 }
+        },
+      ]
+
+      db.collection("port1_board").aggregate(test).toArray(function(err,result){
+        res.render("brdlist",{brddata:result,userdata:req.user});
+     });
+});
+
+
+
 app.get("/brduptview/:no",upload.single('filetest'),function(req,res){
     db.collection("port1_board").findOne({brdid:Number(req.params.no)},function(err,result){
         res.render("brdupdateview",{brddata:result,userdata:req.user});

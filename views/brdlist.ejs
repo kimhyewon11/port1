@@ -37,11 +37,11 @@
                             <div class="searchBox">
                                 <select name="searchCategory">
                                     <option value="brdtitle">제목</option>
-                                    <option value="brdcontext">작성자</option>
+                                    <option value="brdname">작성자</option>
                                 </select>
                                 <input class="searbox" type="text" name="searchResult">
                                 <button class="searbtn" type="submit">검색</button>
-                                <p class="total">Total : </p>
+                                <p class="total">Total : <%- brddata.length%></p>
                             </div>
                     </form>
                 </div>

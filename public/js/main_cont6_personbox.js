@@ -28,7 +28,7 @@ personlist.forEach(function(item,index){
     person += 
     `
     <div class="person_box">
-                        <img src=${item.src}>
+                        <div class='imgWrap'><img src=${item.src}></div>
                         <p class="p_name">${item.pName}</p>
                         <p class="p_job">${item.pJob}</p>
                         <div class="iconWrap">

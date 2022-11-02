@@ -12,6 +12,12 @@
         .h_bot { 
             .center { 
                 width: 80%;
+                .subgnb { 
+                    flex-wrap: wrap;
+                }
+                .subgnb.on { 
+                    height: 120px;
+                }
             }
         }
     }
@@ -125,6 +131,9 @@
                 }
                 .subMenu { 
                     display: flex;
+                }
+                .condition_m { 
+                    display: block;
                 }
             }
         }
@@ -254,6 +263,7 @@
             .h_bot { 
                 .center { 
                     width: 68%;
+                  
                 }
             }
         }

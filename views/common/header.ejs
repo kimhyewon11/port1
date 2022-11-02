@@ -9,7 +9,7 @@
                     </ul>
                 <% } else {%>
                     <ul class="log">
-                        <li><a href="/"><%-userdata.joinname%>님</a></li>
+                        <li><a href="/mypage"><%-userdata.joinname%>님</a></li>
                         <li><a href="/logout"><span class="material-symbols-outlined">how_to_reg</span>Logout</a></li>
                     </ul>
                 <% } %>
@@ -35,11 +35,43 @@
                 <span class="two"></span>
                 <span class="three"></span>
             </div>
+            <ul class="subgnb">
+                <li ><a href="/">Index</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Agents</a></li>
+                <li><a href="/intro">pages</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/brdlist">Board</a></li>
+            </ul>
+            <div class="condition_m">
+                <% if(!userdata) {%>
+                    <ul class="log">
+                        <li><a href="/login"><span class="material-symbols-outlined">login</span>Login</a></li>
+                        <li><a href="/join"><span class="material-symbols-outlined">how_to_reg</span>Register</a></li>
+                    </ul>
+                <% } else {%>
+                    <ul class="log">
+                        <li><a href="/"><%-userdata.joinname%>님</a></li>
+                        <li><a href="/logout"><span class="material-symbols-outlined">how_to_reg</span>Logout</a></li>
+                    </ul>
+                <% } %>
+            </div>
         </div>
     </div>
 </div> 
 
 <script src="../js/gnb.js"></script>
+<script>
+    const subgnb = document.querySelector(".subgnb");
+    const subMenu = document.querySelector(".subMenu");
+
+    subMenu.addEventListener("click",function(){
+        subgnb.classList.toggle("on");
+        subMenu.classList.toggle("on");
+    });
+    
+
+</script>
 
 
 
