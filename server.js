@@ -168,7 +168,21 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage });
 
 
+
 app.post("/add",upload.single('filetest'),function(req,res){
+    
+    //변수하나를 만들어서
+    //조건문으로 첨부파일이 있는 경우에는 해당 파일명으로 db에 넣어줌
+    //빈값은 null
+
+    if(req.file){
+        fileUpload = req.file.originalname;
+    }
+    else{
+        fileUpload = null;
+    }
+
+
     let times = moment().format("YYYY.MM.DD");
 
     db.collection("port1_count").findOne({name:"게시판"},function(err,result){
@@ -180,7 +194,7 @@ app.post("/add",upload.single('filetest'),function(req,res){
             brdcontext:req.body.msg,
             brdnumber:req.body.number,
             brddate : times,
-            brdfile:req.file.originalname
+            brdfile:fileUpload
         },function(err,result){
             db.collection("port1_count").updateOne({name:"게시판"},{$inc:{boardcount:1}},function(err,result){
                 res.redirect("/brdlist");
@@ -235,13 +249,25 @@ app.get("/brduptview/:no",upload.single('filetest'),function(req,res){
 
 //수정한 데이터 post요청으로 db에 생성
 app.post("/update",upload.single('filetest'),function(req,res){
+    //파일첨부 했을 시 첨부된 파일명 들어감
+    // 첨부를 안했을 때는 원래 첨부했었던 파일명이 다시 들어감
+    // 게시글 처음 작성시 첨부파일이 없었다면 -> 수정화면에서 첨부를 안하면 -> null
+    // 게시글 처음 작성시 첨부파일이 있고 -> 수정화면에서 다른 이미지로 교체하면 변경 / 없으면 원래 파일명
+    if(req.file){
+        fileUpload = req.file.originalname
+    }
+    else{
+        fileUpload = req.body.originFile
+    }
+
+
     db.collection("port1_board").updateOne({brdid:Number(req.body.id)},{$set:{
         brdtitle:req.body.subject,
         brdname:req.body.name,
         brdcontext:req.body.msg,
         brdemail:req.body.email,
         brdnumber:req.body.number,
-        brdfile:req.file.originalname
+        brdfile:fileUpload
     }},function(err,result){
         res.redirect("/brddetail/"+req.body.id);
     });

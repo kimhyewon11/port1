@@ -51,7 +51,11 @@
                 <div class="fileWrap">
                     <div class="filebox">
                         <p>File</p>
-                        <div class="file"><img src="/img/<%-brddata.brdfile%>"></div>
+                        <div class="file">
+                            <% if(brddata.brdfile){%>
+                            <img src="/upload/<%-brddata.brdfile%>">
+                            <% } %>
+                        </div>
                     </div>
                     <div class="textboxWrap">
                         <p class="msg">message</p>

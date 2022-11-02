@@ -44,7 +44,9 @@
                         <input readonly type="text" name="number" placeholder="Number" value="<%- brddata.brdnumber%>">
                     </div>
                     <div class="Wrap">
-                        <input type="file" name="filetest" placeholder="file" value="<%- brddata.brdfile%>">
+                        <input type="file" name="filetest" placeholder="file">
+                        <!-- 기존 첨부했었던 파일명-->
+                        <input type="hidden" name="originFile" value="<%- brddata.brdfile %>">
                     </div>
                     <textarea name="msg" placeholder="Write message"><%- brddata.brdcontext%></textarea>
                     <div class="btnWrap">
