@@ -1,4 +1,4 @@
-//cont4 슬라이드 기능 
+//main_cont1 슬라이드 기능
 const mainview = document.querySelector(".mainview");
 const nextbtn = document.querySelector(".next");
 const prevbtn = document.querySelector(".prev");
@@ -25,7 +25,7 @@ mainview.addEventListener("mouseenter",function(){
 
 mainview.addEventListener("mouseleave",function(){
     slides = setInterval(function(){
-        nextSlidea();
+        nextSlides();
     },2000);
 });
 
@@ -55,12 +55,5 @@ function prevSlides(){
 }
 
 
-// circlebtn.forEach(function(el,index){
-//     el.addEventListener("click",function(){
-//         circlebtn.forEach(function(e,index){
-//             e.classList.remove("on");
-//         });
-//         el.classList.add("on");
-//         view.style.marginLeft = -100 *index+"%";
-//     })
-// });
+
+

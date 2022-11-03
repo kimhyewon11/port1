@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <%- include ("common/header.ejs",{menu:"blog"})%>
@@ -22,7 +24,7 @@
         </div>
         <div class="blog_cont2">
             <div class="center">
-                <img src="/img/blog2.jpg"> 
+                <img data-aos="fade-down" data-aos-delay="100" data-aos-duration="1200"  src="/img/blog2.jpg"> 
                 <h3>Latest Architetual Design</h3>
                 <div class="adminWrap">
                     <div class="Wrap">
@@ -62,6 +64,9 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

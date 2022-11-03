@@ -8,10 +8,62 @@
                     border: none;
                     width: 100%;
                     .box1 { 
+                        width: 100%;
                         border: 1px solid #eee;
+                        #login_form,#join_form { 
+                            input { 
+                                width: 80%;
+                            }
+                        }
+
                     }
                     .box2 { 
                         display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    #container {
+        .join { 
+            .center {
+                .boxWrap { 
+                    .box1 { 
+                        #login_form,#join_form { 
+                            input { 
+                                width: 80%;
+                            }
+                            button { 
+                                width: 150px;
+                                margin-left: 15px;
+                                &:last-child {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:580px)
+{
+    #container {
+        .join { 
+            .center {
+                width: 80%;
+                .boxWrap { 
+                    .box1 { 
+                        #login_form,#join_form { 
+                            input { 
+                                width: 80%;
+                            }
+                        }
                     }
                 }
             }

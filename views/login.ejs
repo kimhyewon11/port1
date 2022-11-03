@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <%- include ("common/header.ejs")%>
+    <%- include ("common/header.ejs",{menu:"login"})%>
     <div id="container">
         <div class="join login">
             <div class="center">
@@ -26,8 +26,10 @@
                         <form id="login_form" action="/memberlogin" method="post">
                             <input type="text" name="useremail" placeholder="Email Address">
                             <input type="password" name="userpass" placeholder="Password">
-                            <button type="submit">LOGIN</button>
-                            <button type="botton">CANCEL</button>
+                            <div class="formbtnWrap">
+                                <button id="joinbtn" type="submit">REGISTER</button>
+                                <button id="cancelbtn" type="button">CANCEL</button>
+                             </div>
                         </form>
                         <p class="already">Don't have an account?<a href="/join">Register</a> here</p>
                     </div>

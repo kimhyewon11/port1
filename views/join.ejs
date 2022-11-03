@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <%- include ("common/header.ejs")%>
+    <%- include ("common/header.ejs",{menu:"join"})%>
     <div id="container">
         <div class="join login">
             <div class="center">
@@ -24,11 +24,16 @@
                             <a class="joinbtn on" href="join">REGISTER</a>
                         </div>
                         <form id="join_form" action="/memberjoin" method="post">
-                            <input type="text" name="username" placeholder="Full Name">
-                            <input type="text" name="useremail" placeholder="Email Address">
-                            <input type="password" name="userpass" placeholder="Password">
-                            <button type="submit">REGISTER</button>
-                            <button type="button">CANCEL</button>
+                            <input class="users" type="text" name="username" placeholder="Full Name">
+                            <p class="msg"> </p>
+                            <input  class="users"  type="text" name="useremail" placeholder="Email Address">
+                            <p class="msg"> </p>
+                            <input  class="users"  type="password" name="userpass" placeholder="Password">
+                            <p class="msg"> </p>
+                            <div class="formbtnWrap">
+                                <button id="joinbtn" type="submit">REGISTER</button>
+                                <button id="cancelbtn" type="button">CANCEL</button>
+                             </div>
                         </form>
                         <p class="already">Already a member?<a href="/login">Login</a> here</p>
                     </div>
@@ -44,6 +49,6 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
-    
+    <script src="/js/join.js"></script>
 </body>
 </html>

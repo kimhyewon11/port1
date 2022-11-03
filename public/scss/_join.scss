@@ -46,6 +46,7 @@
                         font-weight: 500;
                     }
                 }
+                
                 #login_form,#join_form { 
                     input { 
                         display: block;
@@ -54,24 +55,45 @@
                         line-height: 45px;
                         border: 1px solid #eee;
                         border-radius: 50px;
-                        margin: 0 auto 20px;
+                        margin: 0 auto 20px ;
                         font-size: 14px;
                     }
-                    button { 
-                        border-radius: 50px;
-                        width: 170px;
-                        background-color: #274aba;
-                        color: #fff;
+                    .msg { 
+                        height: 40px;
                         line-height: 40px;
-                        text-align: center;
-                        border: none;
-                        margin-left: 50px;
-                        font-size: 14px;
-                        &:last-child {
-                            margin-left: 15px;
+                        margin: 0 auto;
+                        width: 325px;
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                    .formbtnWrap {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 325px;
+                        margin: 0 auto;
+                        button { 
+                            border-radius: 50px;
+                            width: 48%;
+                            background-color: #274aba;
+                            color: #fff;
+                            line-height: 40px;
+                            text-align: center;
+                            border: none;
+                            font-size: 14px;
+                           
+                        }
+                        #cancelbtn { 
+                            background-color: #aaa;
                         }
                     }
+                   
                 }
+                #join_form { 
+                    input { 
+                        margin-bottom:0 ;
+                    }
+                }
+                
                 .already { 
                     text-align: center;
                     font-size: 14px;

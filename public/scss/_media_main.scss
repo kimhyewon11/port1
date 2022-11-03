@@ -356,7 +356,7 @@
                                 display: none;
                             }
                         >img { 
-                            top: 300px;
+                            top: 290px;
                         }
                         }
                     }
@@ -364,4 +364,109 @@
             }
         }   
 }
+@media screen and (max-width:580px)
+{
+    #header { 
+        .h_bot { 
+            .center { 
+                .condition_m{
+                    right: -80px;
+                }
+            }
+        }
+    }
+    #container { 
+        .main_cont2 { 
+            .center { 
+                width: 94%;
+                .lookingWrap { 
+                    .boxWrap { 
+                        .box { 
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+        .main_cont3 { 
+            .center { 
+                width: 94%;
+                .slider { 
+                    .view { 
+                        .s_box { 
+                            width: 500px;
+                            img { 
+                                height: 340px;
+                            }
+                        }
+                    }
+                    .circlebtn { 
+                        display: none;
+                    }
+                }
+            }
+        }
+        .main_cont4 {
+            .center { 
+                width: 94%;
+                .placeWrap {
+                    .place { 
+                        width: 100%;
+                        margin:0 0 15px;
+                    }
+                }
+            }
+        }
+        .main_cont6 {
+            .center { 
+                width: 94%;
+                .personboxWrap { 
+                    .person_box { 
+                        &:nth-child(2) { display: none;}
+                        .imgWrap { 
+                            img {
+                                height:455px ;
+                            }
+                        }
+                       
 
+                    }
+                }
+            }
+        } 
+        .main_cont7 {
+            .center { 
+                width: 94%;
+             
+            }
+        }
+        .main_cont8 {
+            .center { 
+                width: 94%;
+                .blogboxWrap { 
+                    .blogWrap { 
+                        width: 100%;
+                        &:nth-child(2) {
+                            display: none;
+                        }
+                    >img { 
+                        top: 295px;
+                    }
+                    }
+                }
+            }
+        }
+    }
+    #footer { 
+        .f_top {
+            .center { 
+                width: 94%;
+                .boxWrap { 
+                    .box { 
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -33,6 +33,7 @@
                         background-color: rgba(0,0,0, 0.5);
                     }
                     >.textWrap { 
+                        width: 40%;
                         position: relative;
                         top: -50%;
                         left: 50%;
@@ -90,10 +91,12 @@
                 }
                 .next { 
                     right: 15px;
+                    cursor: pointer;
                 }
                 .prev {
                     left: 15px;
                     text-align: center;
+                    cursor: pointer;
                     >span {
                         position: relative;
                         left: 3px;

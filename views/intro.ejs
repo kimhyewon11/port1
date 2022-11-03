@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <%- include ("common/header.ejs",{menu:"intro"})%>
@@ -28,7 +30,7 @@
                     <h2>Weclome to Housy</h2>
                     <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
                     <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                    <a class="more" href="#">Read More</a>
+                    <a data-aos="fade-left" data-aos-delay="" data-aos-duration="1200" class="more" href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -172,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="readMore" href="#">Read More</a>
+                <a  data-aos="fade-up" data-aos-delay="" data-aos-duration="1200" class="readMore" href="#">Read More</a>
             </div>
         </div>
         <div class="intro_cont4">
@@ -226,7 +228,7 @@
                 <h2 class="title">OUR AGENT</h2>
                 <p class="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                 <div class="peo_boxes">
-                    <div class="box">
+                    <div  data-aos="fade-down" data-aos-delay="100" data-aos-duration="1200" class="box">
                         <img src="/img/person1.jpg">
                         <p class="job">SUPPORT MANAGER</p>
                         <p class="name">Dwayne Johnson</p>
@@ -234,7 +236,7 @@
                         <p class="pnone"><span class="material-symbols-outlined">call</span>+555 456-789-1234</p>
                         <p class="shop"><span class="material-symbols-outlined">request_quote</span>sales.carshop</p>
                     </div>
-                    <div class="box">
+                    <div  data-aos="fade-down" data-aos-delay="200" data-aos-duration="1200" class="box">
                         <img src="/img/person2.jpg">
                         <p class="job">OFFICE MANAGER</p>
                         <p class="name">Robert Downey Junior</p>
@@ -242,7 +244,7 @@
                         <p class="pnone"><span class="material-symbols-outlined">call</span>+555 456-789-1234</p>
                         <p class="shop"><span class="material-symbols-outlined">request_quote</span>sales.carshop</p>
                     </div>
-                    <div class="box">
+                    <div  data-aos="fade-down" data-aos-delay="300" data-aos-duration="1200" class="box">
                         <img src="/img/person3.jpg">
                         <p class="job">CREATIVE DIRECTOR</p>
                         <p class="name">Benedict Cumberbatch</p>
@@ -256,6 +258,10 @@
     </div>
     <%- include ("common/footer.ejs")%>
     <script src="/js/intro.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     
 </body>
 </html>

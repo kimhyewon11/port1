@@ -139,6 +139,9 @@
   font-weight: 500;
   font-size: 15px;
 }
+#header .h_bot .center .subgnb > li a:hover {
+  color: #274abb;
+}
 #header .h_bot .center .subgnb.on {
   height: 60px;
 }
@@ -255,6 +258,7 @@ body {
   line-height: 1;
   font-family: "Abel", sans-serif;
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
 }
 
 input, select {
@@ -368,19 +372,35 @@ textarea {
   margin: 0 auto 20px;
   font-size: 14px;
 }
-.join .center .boxWrap .box1 #login_form button, .join .center .boxWrap .box1 #join_form button {
+.join .center .boxWrap .box1 #login_form .msg, .join .center .boxWrap .box1 #join_form .msg {
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 325px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.join .center .boxWrap .box1 #login_form .formbtnWrap, .join .center .boxWrap .box1 #join_form .formbtnWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 325px;
+  margin: 0 auto;
+}
+.join .center .boxWrap .box1 #login_form .formbtnWrap button, .join .center .boxWrap .box1 #join_form .formbtnWrap button {
   border-radius: 50px;
-  width: 170px;
+  width: 48%;
   background-color: #274aba;
   color: #fff;
   line-height: 40px;
   text-align: center;
   border: none;
-  margin-left: 50px;
   font-size: 14px;
 }
-.join .center .boxWrap .box1 #login_form button:last-child, .join .center .boxWrap .box1 #join_form button:last-child {
-  margin-left: 15px;
+.join .center .boxWrap .box1 #login_form .formbtnWrap #cancelbtn, .join .center .boxWrap .box1 #join_form .formbtnWrap #cancelbtn {
+  background-color: #aaa;
+}
+.join .center .boxWrap .box1 #join_form input {
+  margin-bottom: 0;
 }
 .join .center .boxWrap .box1 .already {
   text-align: center;
@@ -497,6 +517,7 @@ textarea {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #container .main_cont1 .mainSlider .mainview .main_banner > .textWrap {
+  width: 40%;
   position: relative;
   top: -50%;
   left: 50%;
@@ -550,10 +571,12 @@ textarea {
 }
 #container .main_cont1 .mainSlider .btns .next {
   right: 15px;
+  cursor: pointer;
 }
 #container .main_cont1 .mainSlider .btns .prev {
   left: 15px;
   text-align: center;
+  cursor: pointer;
 }
 #container .main_cont1 .mainSlider .btns .prev > span {
   position: relative;
@@ -1635,9 +1658,22 @@ textarea {
   height: 370px;
   margin-bottom: 30px;
 }
-.brdlist_cont2 .center .boxes .box .imgs {
+.brdlist_cont2 .center .boxes .box .imgWrap {
+  overflow: hidden;
+}
+.brdlist_cont2 .center .boxes .box .imgWrap .imgs, .brdlist_cont2 .center .boxes .box .imgWrap .noimg {
   width: 100%;
   height: 230px;
+  transition: all 0.5s;
+}
+.brdlist_cont2 .center .boxes .box .imgWrap .imgs:hover, .brdlist_cont2 .center .boxes .box .imgWrap .noimg:hover {
+  scale: 1.2;
+}
+.brdlist_cont2 .center .boxes .box .imgWrap .noimg {
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  text-align: center;
+  line-height: 230px;
 }
 .brdlist_cont2 .center .boxes .box .no {
   padding: 10px;
@@ -1647,16 +1683,15 @@ textarea {
 }
 .brdlist_cont2 .center .boxes .box .subject {
   padding: 0 10px 10px;
-  font-size: 14px;
   color: #274aba;
 }
 .brdlist_cont2 .center .boxes .box .subject > a {
   color: #000;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 }
 .brdlist_cont2 .center .boxes .box .name, .brdlist_cont2 .center .boxes .box .email, .brdlist_cont2 .center .boxes .box .time {
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   padding: 0 10px 10px;
 }
@@ -1925,7 +1960,67 @@ textarea {
     display: none;
   }
   #container .main_cont8 .center .blogboxWrap .blogWrap > img {
-    top: 300px;
+    top: 290px;
+  }
+}
+@media screen and (max-width: 580px) {
+  #header .h_bot .center .condition_m {
+    right: -80px;
+  }
+  #container .main_cont2 .center {
+    width: 94%;
+  }
+  #container .main_cont2 .center .lookingWrap .boxWrap .box {
+    width: 90%;
+  }
+  #container .main_cont3 .center {
+    width: 94%;
+  }
+  #container .main_cont3 .center .slider .view .s_box {
+    width: 500px;
+  }
+  #container .main_cont3 .center .slider .view .s_box img {
+    height: 340px;
+  }
+  #container .main_cont3 .center .slider .circlebtn {
+    display: none;
+  }
+  #container .main_cont4 .center {
+    width: 94%;
+  }
+  #container .main_cont4 .center .placeWrap .place {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+  #container .main_cont6 .center {
+    width: 94%;
+  }
+  #container .main_cont6 .center .personboxWrap .person_box:nth-child(2) {
+    display: none;
+  }
+  #container .main_cont6 .center .personboxWrap .person_box .imgWrap img {
+    height: 455px;
+  }
+  #container .main_cont7 .center {
+    width: 94%;
+  }
+  #container .main_cont8 .center {
+    width: 94%;
+  }
+  #container .main_cont8 .center .blogboxWrap .blogWrap {
+    width: 100%;
+  }
+  #container .main_cont8 .center .blogboxWrap .blogWrap:nth-child(2) {
+    display: none;
+  }
+  #container .main_cont8 .center .blogboxWrap .blogWrap > img {
+    top: 295px;
+  }
+  #footer .f_top .center {
+    width: 94%;
+  }
+  #footer .f_top .center .boxWrap .box {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -2060,10 +2155,34 @@ textarea {
     width: 100%;
   }
   #container .join .center .boxWrap .box1 {
+    width: 100%;
     border: 1px solid #eee;
+  }
+  #container .join .center .boxWrap .box1 #login_form input, #container .join .center .boxWrap .box1 #join_form input {
+    width: 80%;
   }
   #container .join .center .boxWrap .box2 {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #container .join .center .boxWrap .box1 #login_form input, #container .join .center .boxWrap .box1 #join_form input {
+    width: 80%;
+  }
+  #container .join .center .boxWrap .box1 #login_form button, #container .join .center .boxWrap .box1 #join_form button {
+    width: 150px;
+    margin-left: 15px;
+  }
+  #container .join .center .boxWrap .box1 #login_form button:last-child, #container .join .center .boxWrap .box1 #join_form button:last-child {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  #container .join .center {
+    width: 80%;
+  }
+  #container .join .center .boxWrap .box1 #login_form input, #container .join .center .boxWrap .box1 #join_form input {
+    width: 80%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -2225,5 +2344,13 @@ textarea {
   }
   #container .blog_cont2 .center img {
     height: 300px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #container {
+    width: 100%;
+  }
+  #container .mypage_cont {
+    width: 80%;
   }
 }

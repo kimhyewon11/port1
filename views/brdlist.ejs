@@ -49,9 +49,9 @@
                     <% for(let i = 0 ; i < brddata.length ; i++) { %>
                         <div class="box">
                             <% if(brddata[i].brdfile) { %>
-                            <img class="imgs" src="/upload/<%- brddata[i].brdfile%>">
+                            <div class="imgWrap"><img class="imgs" src="/upload/<%- brddata[i].brdfile%>"></div>
                             <% } else {%>
-                            <div class="noimg">썸네일 없음</div>
+                            <div class="imgWrap"><p class="noimg">썸네일 없음</p></div>
                             <% }%>
                             <div class="no">NO.<%- brddata[i].brdid%></div>
                             <div class="subject"><a href="/brddetail/<%- brddata[i].brdid%>"><%- brddata[i].brdtitle%></a></div>

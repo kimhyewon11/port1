@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <%- include ("common/header.ejs",{menu:"index"})%>
@@ -20,9 +21,9 @@
                     <div class="main_banner">
                         <div class="bg"></div>
                         <div class="textWrap">
-                            <p class="m_text"> BEST PLACE TO FIND HOME</p>
-                            <p class="s_text">Allow us to guide you through the innovative stress free approach in <br> finding your dream Properties.</p>
-                            <div class="btnWrap">
+                            <p data-aos="fade-down" data-aos-delay="100"  data-aos-duration="3000" class="m_text"> BEST PLACE TO FIND HOME</p>
+                            <p data-aos="fade-left" data-aos-delay="200" data-aos-duration="2000" class="s_text">Allow us to guide you through the innovative stress free approach in <br> finding your dream Properties.</p>
+                            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" class="btnWrap">
                                 <a class="nowbtn" href="#">GET STARTED NOW</a>
                                 <a class="morebtn" href="#">LEARN MORE</a>
                             </div>
@@ -63,8 +64,8 @@
                 <h2 class="title">WHAT ARE YOU LOOKING FOR?</h2>
                 <p class="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
                 <div class="lookingWrap">
-                    <img src="/img/me4.jpg">
-                    <div class="boxWrap">
+                    <img data-aos="fade-right" data-aos-duration="1000" src="/img/me4.jpg">
+                    <div  data-aos="fade-left" data-aos-duration="1000" class="boxWrap">
                         <div class="box">
                             <span class="material-symbols-outlined">domain</span>
                             <div class="b_textWrap">
@@ -171,7 +172,7 @@
                 <h2 class="title">OUR TESTIMONIAL</h2>
                 <p class="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
                 <div class="reviewWrap">
-                    <div class="reviewbox">
+                    <div  data-aos="fade-down" data-aos-duration="1200" class="reviewbox">
                         <img src="/img/person4c2.jpg">
                         <p class="name">Kendall Jenner</p>
                         <div class="starWrap">
@@ -184,7 +185,7 @@
                         </div>
                         <p class="context">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .</p>
                     </div>
-                    <div class="reviewbox">
+                    <div  data-aos="fade-down" data-aos-duration="1200" class="reviewbox">
                         <img src="/img/person3copy.jpg">
                         <p class="name">Robert Downey Junior</p>
                         <div class="starWrap">
@@ -197,7 +198,7 @@
                         </div>
                         <p class="context">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .</p>
                     </div>
-                    <div class="reviewbox">
+                    <div  data-aos="fade-down" data-aos-duration="1200" class="reviewbox">
                         <img src="/img/person2copy.jpg">
                         <p class="name">Benedict Cumberbatch</p>
                         <div class="starWrap">
@@ -218,7 +219,7 @@
                 <h2 class="title">OUR BLOG</h2>
                 <p class="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
                 <div class="blogboxWrap">
-                    <div class="blogWrap">
+                    <div  data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1200" class="blogWrap">
                         <div class="imgWrap">
                             <img src="/img/blog.jpg">
                             <div class="dateWrap">
@@ -235,7 +236,7 @@
                         <p class="b_title">Selling Your Real House</p>
                         <p class="b_context">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="blogWrap">
+                    <div data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1200" class="blogWrap">
                         <div class="imgWrap">
                             <img src="/img/blog2.jpg">
                             <div class="dateWrap">
@@ -252,7 +253,7 @@
                             <p class="b_title">Selling Your Real House</p>
                             <p class="b_context">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="blogWrap">
+                    <div data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1200" class="blogWrap">
                         <div class="imgWrap">
                             <img src="/img/ho8.jpg">
                             <div class="dateWrap">
@@ -274,11 +275,17 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="/js/main.js"></script>
-    <script src="/js/main_slide.js"></script>
-    <script src="/js/CountUp.js"></script>
-    <script src="/js/main_cont6_personbox.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/js/main_cont1_Slider.js"></script>
+    <script src="/js/main_cont3_array.js"></script>
+    <script src="/js/main_cont3_Slider.js"></script>
+    <script src="/js/main_cont4_array.js"></script>
+    <script src="/js/main_cont5_countUp.js"></script>
+    <script src="/js/main_cont6_array.js"></script>
 
 </body>
 </html>

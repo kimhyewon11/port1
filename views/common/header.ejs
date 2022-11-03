@@ -51,7 +51,7 @@
                     </ul>
                 <% } else {%>
                     <ul class="log">
-                        <li><a href="/"><%-userdata.joinname%>님</a></li>
+                        <li><a href="/mypage"><%-userdata.joinname%>님</a></li>
                         <li><a href="/logout"><span class="material-symbols-outlined">how_to_reg</span>Logout</a></li>
                     </ul>
                 <% } %>
@@ -60,18 +60,7 @@
     </div>
 </div> 
 
-<script src="../js/gnb.js"></script>
-<script>
-    const subgnb = document.querySelector(".subgnb");
-    const subMenu = document.querySelector(".subMenu");
-
-    subMenu.addEventListener("click",function(){
-        subgnb.classList.toggle("on");
-        subMenu.classList.toggle("on");
-    });
-    
-
-</script>
+<script src="../js/subgnb.js"></script>
 
 
 

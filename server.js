@@ -53,7 +53,7 @@ app.post("/memberjoin",function(req,res){
     
     db.collection("port1_join").findOne({joinemail:req.body.useremail},function(err,result){
         if(result){
-            res.send("<script>alert('이미 가입된 아이디 입니다'); location.href='/join' </script>")
+            res.send("<script>alert('이미 가입된 이메일 입니다.'); location.href='/join' </script>")
         }
         else { 
             db.collection("port1_count").findOne({name:"회원정보"},function(err,result){
