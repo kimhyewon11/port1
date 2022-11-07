@@ -32,7 +32,7 @@ mainview.addEventListener("mouseleave",function(){
 
 //슬라이드 넘어가는 함수 생성 
 function nextSlides(){
-    if(count1 == 2){
+    if(count1 == 5){
         count1= 0;
     }
     else{
@@ -45,7 +45,7 @@ function nextSlides(){
 //슬라이드 이전 함수 
 function prevSlides(){
     if(count1 == 0){
-        count1= 2;
+        count1= 5;
     }
     else{
         count1--

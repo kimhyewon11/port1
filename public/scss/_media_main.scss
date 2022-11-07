@@ -24,6 +24,15 @@
     #container { 
         .main_cont1 { 
             height: 840px;
+            .mainSlider { 
+                .mainview { 
+                    .main_banner { 
+                        .textWrap {
+                            width: 35%;
+                        }
+                    }
+                }
+            }
         }
         .main_cont2 { 
             width: 100%;
@@ -139,6 +148,17 @@
         }
     }
     #container { 
+        .main_cont1 { 
+            .mainSlider { 
+                .mainview { 
+                    .main_banner { 
+                        .textWrap {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
         .main_cont2 { 
             .center { 
                 width: 70%;
@@ -268,6 +288,17 @@
             }
         }
         #container { 
+            .main_cont1 {
+                .mainSlider { 
+                    .mainview { 
+                        .main_banner { 
+                            .textWrap {
+                                width: 45%;
+                            }
+                        }
+                    }
+                }
+            }
             .main_cont2 { 
                 .center { 
                     padding: 60px 0;

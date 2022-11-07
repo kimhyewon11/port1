@@ -6,27 +6,27 @@
 
     let personlist = [
         {
-            src:"/img/person1.jpg",
-            pName:"Maria Blank",
-            pJob:"Office Manager",
+            src:"/portimg/icon1.jpg",
+            pName:"문의하기",
+            pJob:"당신의 집에 대한 이야기를 들려주세요 메일로 문의 주시면 2~3일 이내에 연락 드립니다.",
             delay:"100"
         },
         {
-            src:"/img/person2.jpg",
-            pName:"Karen Paran",
-            pJob:"Support Manager",
+            src:"/portimg/icon2.jpg",
+            pName:"상담하기",
+            pJob:"가족의 라이프 스타일과 어떠한 공간의 분위기를 원하는지 예산의 범위 등 공간기록이 함께 방향을 잡아갑니다.",
             delay:"200"
         },
         {
-            src:"/img/person3.jpg",
-            pName:"Martin Smith",
-            pJob:"Web Developer",
+            src:"/portimg/icon3.jpg",
+            pName:"설계계약",
+            pJob:"꼼꼼한 맞춤 상담 후 계약을 진행합니다.",
             delay:"300"
         },
         {
-            src:"/img/person4.jpg",
-            pName:"John Pitarshon",
-            pJob:"Creative Director",
+            src:"/portimg/icon4.jpg",
+            pName:"건축 설계",
+            pJob:"라이프 스타일과 원하는 컨셉에 맞도록 건축 설계에 들어갑니다.",
             delay:"400"
         }
     ]

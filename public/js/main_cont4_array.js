@@ -7,33 +7,33 @@ let list = "";
 
 let placelist = [
     {
-        placename :"Florida",
+        placename :"Mijang-6 Residence",
         properties:"14",
-        src:"/img/place1.jpg",
+        src:"/portimg/cont4-1.jpg",
         delay:"100"
     },
     {
-        placename :"California",
+        placename :"Geochang Residence",
         properties:"98",
-        src:"/img/place2.jpg",
+        src:"/portimg/cont4-2.jpg",
         delay:"200"
     },
     {
-        placename :"New York",
+        placename :"Damyang Residence",
         properties:"98",
-        src:"/img/place3.jpg",
+        src:"/portimg/cont4-3.jpg",
         delay:"300"
     },
     {
-        placename :"BietNam ",
+        placename :"Cheongdo Residence ",
         properties:"80",
-        src:"/img/place5.jpg",
+        src:"/portimg/cont4-4.jpg",
         delay:"400"
     },
     {
-        placename :"London",
+        placename :"Hampyeong Residence",
         properties:"70",
-        src:"/img/place4.jpg",
+        src:"/portimg/cont4-7.jpg",
         delay:"500"
     },
 ]

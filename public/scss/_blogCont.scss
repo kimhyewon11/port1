@@ -25,9 +25,9 @@
             height: 610px;
         }
         h3 { 
-            font-size: 20px;
-            font-weight: 500;
-            margin:30px 0 20px ;
+            font-size: 17px;
+            font-weight: bold;
+            margin:30px 0  ;
         }
         .adminWrap { 
             display: flex;
@@ -46,10 +46,11 @@
             }
         }
         .text { 
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 13px;
+            line-height: 30px;
             color: #333;
             margin-bottom: 50px;
+
         }
         .comments {
             > p { 

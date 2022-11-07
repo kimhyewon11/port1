@@ -3,64 +3,64 @@
 //main cont3 box 객체 생성 
 let listdata = [
     {
-        imgsrc:"/img/ho2.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3.jpg",
+        title:"Jin yul jae",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho3.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-2.jpg",
+        title:"Love ya",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho4.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-3.jpg",
+        title:"한림우주(翰林宇宙)",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho5.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-4.jpg",
+        title:"대기만성(大器晩成)",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho6.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-5.jpg",
+        title:"Geumma House",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho7.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-6.jpg",
+        title:"적재(赤齋)",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho8.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-7.jpg",
+        title:"Cheongdo House",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
         sq:"sqft"
     },
     {
-        imgsrc:"/img/ho9.jpg",
-        title:"Luxury Villa",
+        imgsrc:"/portimg/cont3-8.jpg",
+        title:" Starry Village",
         address:"123 Kathal St.Tampa City",
         bed:"3 Beds",
         bath:"2 Baths",
