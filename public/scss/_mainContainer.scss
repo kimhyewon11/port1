@@ -125,28 +125,87 @@
         display: flex;
         justify-content: center;
         .center { 
-            width: 85%;
+            width: 87%;
             padding: 100px 0;
             .title { 
-                text-align: center;
-                font-size: 30px;
+                font-size: 40px;
                 font-weight: 500;
                 margin-bottom: 20px;
+                border-bottom: 1px solid #555 ;
+                padding: 0 0 20px 10px;
             }
             .sub_title { 
                 font-size: 14px;
                 color: #555;
                 margin-bottom: 50px;
-                text-align: center;
                 line-height: 30px;
+                padding-left: 10px;
             }
             .lookingWrap { 
                 display: flex;
                 justify-content: center;
-                img{
-                    height:650px;
-                    width:740px;
-                 }
+                padding: 10px;
+                >.imgW {
+                    height: 100%;
+                    >img{
+                        height:800px;
+                        width:800px;
+                     }
+                     .text1 {width: 100px; }
+                     .text2 {width: 118px; }
+                     >.context { 
+                        margin-left: 10px;
+                        margin-top: 20px;
+                        font-size: 22px;
+                        position: relative;
+                        transition: all 0.5s;
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background-color: #555;
+                            position: absolute;
+                            top: 30px;
+                            left: 0;
+                            transition: all 0.5s;
+                            opacity: 0;
+                        }
+                        &:hover {
+                            color: #000;
+                            &::after {
+                                opacity: 1;
+                            }
+                         }
+                     }
+                }
+                .wrap1{
+                    padding-right: 150px; 
+                }
+                .wrap2{
+                    padding-left: 50px;
+                    position: relative;
+                    >img { 
+                        height: 500px;
+                        width: 500px;
+                    }
+                    >.hoverImg {
+                        position: absolute;
+                        left: 50px;
+                        top: 0;
+                        transition: all 0.5s;
+                        opacity: 0;
+                    }
+                    &:hover { 
+                        >.hoverImg {
+                            position: absolute;
+                            left: 50px;
+                            top: 0;
+                            opacity: 1;
+                        }
+                       
+                    }
+                }
+                
                  .boxWrap { 
                     padding:10px 0 0 100px ;
                     .box { 
@@ -182,19 +241,19 @@
         display: flex;
         justify-content: center;
         .center { 
-            width: 85%;
+            width: 87%;
             padding: 100px 0;
             .title { 
-                text-align: center;
-                font-size: 30px;
+                font-size: 40px;
                 font-weight: 500;
-                margin-bottom: 20px;
+                margin-bottom: 40px;  
+                border-bottom: 1px solid #555 ;
+                padding: 0 0 20px 10px;
             }
             .sub_title { 
                 font-size: 13px;
                 color: #555;
-                margin-bottom: 50px;
-                text-align: center;
+                margin-bottom: 100px;
             }
             >.slider { 
                 width:90%;
@@ -210,7 +269,7 @@
                         border: 1px solid #efefef;
                         img { 
                             width: 100%;
-                            height: 190px;
+                            height: 250px;
                         }
                        .s_title { 
                             margin:20px 0 15px 15px ;
@@ -245,14 +304,14 @@
                     display: flex;
                     justify-content: center;
                     .cir { 
-                        width:15px;
-                        height: 15px;
-                        background-color: #aaa;
-                        margin: 30px 5px;
-                        border-radius: 50%;
+                        width:30px;
+                        height: 5px;
+                        background-color: #ccc;
+                        margin: 50px 5px 0;
+                        border-radius: 50px;
                     }
                     .cir.on {
-                        background-color: #555;
+                        background-color: #777;
                     }
                 }
             }
@@ -263,21 +322,26 @@
         justify-content: center;
         background-color: #efefef;
         .center { 
-            width: 1120px;
+            width: 87%;
             padding: 100px 0;
             .title { 
-                text-align: center;
-                margin-bottom: 20px;   
+                font-size: 40px;
+                font-weight: 500;
+                margin-bottom: 40px;  
+                border-bottom: 1px solid #555 ;
+                padding: 0 0 20px 10px; 
             }
             .sub_title { 
                 font-size: 14px;
                 color: #555;
-                margin-bottom: 50px;
-                text-align: center;
+                margin-bottom: 100px;
+                padding-left: 10px;
             }
             .placeWrap { 
                 display: flex;
-                flex-wrap:wrap ;
+                flex-wrap:wrap;
+                width: 1400px;
+                margin: 0 auto;
                 .place { 
                     &:hover{
                         .placetextwrap {
@@ -285,16 +349,16 @@
                         }
                     }
                     &:nth-child(4) {
-                        width:720px ;
+                        width:800px ;
                     }
-                    width: 350px;
+                    width: 370px;
                     height: 250px;
-                    margin:0 10px 20px;
+                    margin:0 30px 30px;
                     position: relative;
                     overflow: hidden;
                     img { 
                         width: 100%;
-                        height: 250px;
+                        height: 100%;
                     }
                     .placetextwrap { 
                         transition: all 0.5s;
@@ -333,7 +397,7 @@
             width: 100%;
             height: 100%;
             position:absolute;
-            background-color: rgba(0,0,0, 0.6);
+            background-color: rgba(0,0,0, 0.4);
         }
         .center { 
             z-index: 99;
@@ -379,17 +443,16 @@
         .center {
             width: 70%;
             padding: 100px 0;
-            text-align: center;
             .title { 
-                font-size: 30px;
+                font-size: 40px;
                 font-weight: 500;
-                text-align: center;
             }
             .sub_title { 
-                font-size: 15px;
-                margin: 30px 0 80px;
+                font-size: 13px;
+                margin: 50px 0 80px;
                 color: #555;
-                text-align: center;
+                line-height: 28px;
+                width: 1000px;
             }
             .personboxWrap { 
                 padding: 25px 0;
@@ -402,12 +465,14 @@
                     margin: 0 20px;
                     >.imgWrap {
                         overflow: hidden;
-                        padding: 20px 0;
+                        padding: 20px ;
                         >img { 
                             width:160px;
                             height: 160px;
                             transition: all 0.5s;
                             overflow:hidden ;
+                            display: block;
+                            margin: 0 auto;
                             &:hover {
                                 scale: 1.2;
                             }
@@ -423,6 +488,7 @@
                         color: #666;
                         margin-bottom: 25px;
                         line-height: 30px;
+                        height: 100px;
                     }
 
                     .iconWrap { 
@@ -449,37 +515,42 @@
         display: flex;
         justify-content: center;
         .bg { 
+            display: none;
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0, 0.7 );
+            background-color: rgba(0,0,0, 0.3 );
         }
         .center { 
             z-index: 99;
-            width: 1120px;
+            width: 85%;
             padding: 100px 0;
             .title { 
-                font-size: 25px;
-                color: #fff;
-                margin-bottom: 25px;
-                text-align: center;
+                font-size: 40px;
+                color: #000;
+                margin-bottom: 40px;
+                border-bottom: 1px solid #555;
+                padding: 0 0 25px 10px;
             }
             .sub_title { 
                 font-size: 15px;
-                color: #fff;
-                margin-bottom: 50px;
-                text-align: center;
+                color: #000;
+                margin-bottom: 130px;
+                padding-left: 10px;
             }
             .reviewWrap  {
                 display: flex;
                 justify-content: space-between;
-                margin-top: 100px;
+                margin-top: 150px;
+                width: 85%;
+                margin: 0 auto;
                 .reviewbox { 
-                    width: 350px;
+                    width: 380px;
                     background-color: #fff;
                     border-radius: 5px;
                     position: relative;
                     text-align: center;
+                    border: 1px solid #ccc;
                     img { 
                         display: block;
                         border-radius: 50%;
@@ -523,23 +594,26 @@
         display: flex;
         justify-content: center;
         .center { 
-            width: 1120px;
-            padding: 100px 0;
+            width: 87%;
+            padding: 100px 0 150px;
             .title { 
-                font-size: 25px;
-                margin-bottom: 25px;
-                text-align: center;
+                font-size: 40px;
+                margin-bottom: 40px;
+                border-bottom: 1px solid #555;
+                padding: 0 0 25px 10px;
             }
             .sub_title { 
                 font-size: 15px;
-                margin-bottom: 50px;
-                text-align: center;
+                margin-bottom: 100px;
+                padding-left:10px ;
             }
             .blogboxWrap {
                 display: flex;
                 justify-content: space-between;
+                width: 85%;
+                margin: 0 auto;
                 .blogWrap { 
-                    width: 350px;
+                    width: 420px;
                     border: 1px solid #efefef;
                     position: relative;
                     .imgWrap { 

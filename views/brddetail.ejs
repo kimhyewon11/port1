@@ -31,21 +31,17 @@
                 <div class="row">
                     <div class="Wrap">
                         <div class="auther"><%-brddata.brdname%></div>
-                        <p></p>
                     </div>
                     <div class="Wrap">
                         <div class="email"><%-brddata.brdemail%></div>
-                        <p></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="Wrap">
                         <div class="subject"><%-brddata.brdtitle%></div>
-                        <p></p>
                     </div>
                     <div class="Wrap">
                         <div class="number"><%-brddata.brdnumber%></div>
-                        <p></p>
                     </div>
                 </div>
                 <div class="fileWrap">
@@ -62,14 +58,15 @@
                         <div class="textbox"><%-brddata.brdcontext%></div>
                     </div>
                 </div>
-                
-                <% if(userdata.joinemail === brddata.brdemail) {%>
-                    <div class="btnWrap">
-                        <a class="upt" href="/brduptview/<%-brddata.brdid%>">update</a>
-                        <a class="del" href="/delete/<%-brddata.brdid%>">delete</a>
-                    </div>
-                <% } %>    
-                <a class="list" href="/brdlist">list</a>
+                <div class="btnWrapper">
+                    <a class="list" href="/brdlist">list</a>
+                    <% if(userdata.joinemail === brddata.brdemail) {%>
+                        <div class="btnWrap">
+                            <a class="upt" href="/brduptview/<%-brddata.brdid%>">update</a>
+                            <a class="del" href="/delete/<%-brddata.brdid%>">delete</a>
+                        </div>
+                    <% } %>    
+                </div>        
             </div>
         </div>
     </div>

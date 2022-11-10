@@ -2,24 +2,22 @@
     display: flex;
     justify-content: center;
     .center { 
-        width: 1120px;
+        width: 80%;
         h2 { 
-            text-align: center;
-            margin:110px 0 25px;
+            margin:110px 0 100px;
             font-weight: 500;
-            font-size: 20px;
-        }
-        .sub_t { 
-            text-align: center;
-            margin-bottom: 45px;
-            font-size: 14px;
-            color: #555;
+            font-size: 40px;
+            border-bottom: 1px solid #555;
+            padding: 0 0 25px 10px;
         }
         .infoWrap { 
             text-align: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            margin-bottom: 50px;
             .info { 
+                margin: 0 80px;
+                width: 150px;
                 span {
                     color: #555;
                     font-size: 25px;
@@ -38,42 +36,56 @@
             }
         }
         form { 
-            width: 735px;
+            width: 800px;
             margin: 0 auto;
             .Wrap { 
                 display: flex;
                 justify-content: space-between;
                 input { 
-                    border:1px solid #eee;
+                    border-bottom:1px solid #cdcdcd;
                     line-height: 45px;
-                    width: 330px;
-                    margin-bottom: 20px;
+                    width: 350px;
+                    margin-bottom: 40px;
                     padding-left:20px;
                     font-size: 14px;
-                    
+                    transition: all 0.5s;
+                    &:hover { 
+                        border-bottom: 1px solid #555;
+                    }
                 }
                 
             }
             textarea {
-                width: 693px;
+                width: 750px;
                 height: 240px;
-                border:1px solid #eee;
+                border:1px solid #cdcdcd;
                 padding: 20px;
-                margin-bottom: 20px;
+                margin:50px 0 100px;
+                transition: all 0.5s;
+                &:hover { 
+                    border: 1px solid #555;
+                }
             }
             .btnWrap { 
                 display: flex;
                 justify-content: center;
+                margin-bottom: 50px;
                 >button { 
                     display: block;
                     margin:0 10px 62px ;
                     width: 168px;
                     font-size: 13px;
                     line-height:45px ;
-                    color: #fff;
+                    color: #555;
                     border: none;
                     border-radius: 5px;
-                    background-color: #274aba;
+                    background-color: #fff;
+                    border: 1px solid #efefef;
+                    transition:  all 0.5s;
+                    &:hover { 
+                        background-color: #555;
+                        color: #fff;
+                    }
                 }
                 >a { 
                     display: block;
@@ -81,11 +93,17 @@
                     width: 168px;
                     font-size: 13px;
                     line-height:45px ;
-                    color: #fff;
+                    color: #555;
                     border: none;
                     border-radius: 5px;
                     background-color: #aaa;
                     text-align: center;
+                    background-color: #efefef;
+                    border: 1px solid #efefef;
+                    transition: all 0.5s;
+                    &:hover { 
+                        background-color: #fff;
+                    }
                 }
             }
             

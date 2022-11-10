@@ -2,15 +2,23 @@
     display: flex;
     justify-content: center;
     .title { 
-        font-size: 25px;
-        margin:50px 0;
-        font-weight: 500;
-        text-align: center;
+        font-size: 40px;
+            margin-bottom: 130px;
+            border-bottom: 1px solid #555;
+            padding: 0 0 25px 10px;
     }
     .center {
-        width: 1120px;
-        margin: 80px 0;
+        width: 87%;
+        margin: 100px 0;
+        .total { 
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
         .searchWrap { 
+            margin-top: 30px;
+            margin-left: 1230px;
+            width: 400px;
             form {
                 .searchBox { 
                     select {
@@ -41,11 +49,7 @@
 
                     }
                 }
-                .total { 
-                    font-size: 14px;
-                    font-weight: 500;
-                    margin-bottom: 20px;
-                }
+               
             }
         }
         .boxes { 
@@ -103,12 +107,18 @@
         .contactbtn { 
             text-align: center;
             display: block;
-            width: 120px;
+            width: 160px;
             line-height: 40px;
-            color: #fff;
-            background-color: #274aba;
-            border-radius: 5px;
+            color: #555;
+            background-color: #fefefe;
+            border-radius: 50px;
             margin:30px auto 80px;
+            border: 1px solid #555;
+            transition: all 0.5s;
+            &:hover { 
+                color: #fff;
+                background-color: #555;
+            }
         }
     }
 }

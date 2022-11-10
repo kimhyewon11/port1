@@ -1,54 +1,87 @@
 #footer { 
     position: relative;
-
     .f_top {
-        background-color: #202040;
+        background-color: #fff;
         display: flex;
         justify-content: center;
         .center { 
-            width:1120px;
-            color: #fff;
-            .boxWrap { 
-                display: flex;
-                margin:75px 0;
-                .box { 
-                    margin: 0 20px;
-                    .title { 
-                        font-size:20px;
-                        font-weight: 400;
-                        margin-bottom: 33px;
-                    }
-                    p {
-                        color: #c5cdd9;
-                        font-size: 14px;
-                        margin-bottom: 20px;  
-                        line-height: 20px;                      
-                    }
-                    .icons { 
-                        display: flex;
-                        p { 
-                            margin-right: 8px;
-                            width: 45px;
-                            height: 45px;
-                            background-color: #1a1a38;
-                            span { 
-                                color: #fff;
-                                padding: 13px;
-                                font-size: 18px;
-                            }
-                        }
-                    }
+            width:90%;
+            color: #000;
+            margin: 100px  0 50px;
+            padding: 30px 20px 0;
+            position: relative;
+            border-top:1px solid #555 ;
+           >h6 { 
+                font-size: 23px;
+                font-weight: 500;
+                margin-bottom: 30px;
+                .down { 
+                    transition: all 0.5s;
+                    opacity: 0;
                 }
-            }  
+                .down.chg { 
+                    display: inline-block;
+                    opacity: 1;
+                }
+                .up { 
+                    position: relative;
+                    top: 0;
+                    left: -29px;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+                .up.active { 
+                    opacity: 1;
+                    position: relative;
+                    top: 0;
+                    left: -29px;
+                }
+           }
+           .f_textinfo.on { 
+            opacity: 1;
+           }
+           .f_textinfo { 
+                 opacity: 0;
+                 overflow: hidden;
+                 transition: all 0.5s;
+            >p { 
+                line-height: 30px;
+                font-size: 14px;
+                >span{ 
+                    margin-right: 20px;
+                }
+            }
+            
+           }
+           .personal { 
+            font-size: 14px;
+            position: absolute;
+            top:30px;
+            right: 0;
+            &::after { 
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: #000;
+                display: block;
+                transition: all 0.5s;
+                margin-top: 10px;
+            }
+            &:hover { 
+                &::after { 
+                    width: 100%;   
+                }
+            }
+        }
         }
     }
     .f_bot { 
-        background-color: #1a1a38;
+        background-color: #efefef;
         .copy { 
             line-height:100px ;
             text-align: center;
             font-size: 14px;
-            color: #fff;
+            color: #555;
         }
     }
     .upbtn { 
@@ -57,7 +90,7 @@
         bottom: 35px;
         width: 35px;
         height: 35px;
-        background-color:#274aba ;
+        background-color:#999 ;
         border-radius: 5px;
         span { 
             color: #fff;

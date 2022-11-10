@@ -44,24 +44,27 @@
     }
 }
 .intro_cont3 { 
-    background-color:#f9f9f8 ;
+    background-color:#fbfbfb ;
     display: flex;
     justify-content: center;
     padding: 100px 0; 
     .center {
-        width: 65%;
+        width: 80%;
         .title { 
-            font-size: 30px;
-            text-align: center;
+            font-size: 40px;
             margin-bottom: 35px;
+            border-bottom: 1px solid #555;
+            padding: 0 0 25px 10px;
         }
         .sub_title {
             font-size: 14px;
             color: #555;
-            margin-bottom: 80px;
-            text-align: center;
+            margin: 40px 0 100px;
+            padding: 10px;
         }
         .chooseBoxes { 
+            width: 80%;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -169,29 +172,29 @@
     .center { 
         z-index: 99;
         padding: 130px 0 100px;
-        width: 1000px;
+        width: 83%;
         height: 100%;
         .title { 
-            text-align: center;
             color: #fff;
-            font-size: 30px;
             margin-bottom:80px;
+            font-size: 40px;
+            margin-bottom: 100px;
+            border-bottom: 1px solid #efefef;
+            padding: 0 0 25px 10px;
         }
         .slider { 
             overflow: hidden;
-
+            width: 100%;
             .view { 
                 display: flex;
                 width: 300%;
                 transition: all 0.6s;
-                border-radius: 5px;
                 .s_box { 
                     margin: 0 50px;
-                    width: 900px;
-                    border-radius: 5px;
+                    width: 80%;
+                    height: 100%;
                     >.box { 
                         background-color: #fff;
-                        border-radius: 10px;
                         padding:50px 40px ;
                         margin-bottom: 30px;
                         >h6 {
@@ -212,20 +215,21 @@
                     }
                     >.last_box {
                         display: flex;
+                        justify-content: space-between;
                         >.box_left { 
-                            margin-right: 40px;
+                            margin: 80PX 0 0 90PX;
                             >.Wrap { 
                                 display: flex;
-                                margin-bottom: 35px;
+                                margin-bottom: 45px;
                                 >h6 { 
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     font-weight: bold;
-                                    margin-right: 25px;
+                                    margin-right: 40px;
                                 }
                                 >.texts{
                                     >p { 
                                         font-size: 13px;
-                                        line-height: 30px;
+                                        line-height: 40px;
                                     }
                                 } 
                             }
@@ -270,16 +274,16 @@
             .circleBtn {
                 display: flex;
                 margin: 30px auto 0;
-                width: 120px;
+                width: 150px;
                 .cir { 
                     margin: 0 10px;
-                    width: 14px;
-                    height: 14px;
-                    border-radius:50%;
+                    width: 45PX;
+                    height: 4px;
+                    border-radius:50PX;
                     background-color: #fff;
                 }
                 .cir.on {
-                    background-color:  #555;
+                    background-color:  #999;
                     box-sizing: border-box;
                 }
             }
@@ -293,15 +297,16 @@
         width: 70%;
         padding: 100px 0;
         .title {
-            font-size: 30px;
-            margin-bottom: 35px;
-            text-align: center;
+            margin-bottom:80px;
+            font-size: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #555;
+            padding: 0 0 25px 10px;
         }
         .sub_title { 
             font-size: 15px;
             color: #555;
-            margin-bottom: 70px;
-            text-align: center;
+            margin-bottom: 100px;
         }
         .peo_boxes { 
             width: 100%;
