@@ -16,16 +16,12 @@
 <body>
     <%- include ("common/header.ejs",{menu:"intro"})%>
     <div id="container">
-        <div class="cont1">
-            <%- include ("common/banner.ejs")%>
-            <div class="textWrap">
-                <p class="m_text">ABOUT US</p>
-                <p class="s_text">Index/About Us</p>
-            </div>
+        <div class="intro_cont1">
+            <p class="intro_title">ABOUT US</p>
         </div>
         <div class="intro_cont2">
             <div class="center">
-                <img src="/portimg/intro1.jpg">
+                <img class="intro_img" src="/portimg/intro1.jpg">
                 <div class="welcomeWrap">
                     <h2>공간기록은 공간에 <br> 물음을 던지고 답을 찾아가는 <br>과정의 기록입니다</h2>
                     <p>물체가 존재 할 수 있는 빈 곳에,
@@ -41,9 +37,7 @@
         </div>
         <div class="intro_cont3">
             <div class="center">
-                <h2 class="title">History / Press</h2>
-                <p class="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                <div class="chooseBoxes">
+                <h2 class="title">History / Press</h2>                <div class="chooseBoxes">
                     <div class="box trust box1">
                         <div class="left">
                             <p class="num">2010</p>
@@ -165,7 +159,7 @@
                 <a  data-aos="fade-up" data-aos-delay="" data-aos-duration="1200" class="readMore" href="#">Read More</a>
             </div>
         </div>
-        <div class="intro_cont4">
+        <!-- <div class="intro_cont4">
             <div class="bg"></div>
             <div class="center">
                 <h4 class="title">Who we are</h4>
@@ -234,11 +228,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="intro_cont5">
             <div class="center">
                 <h2 class="title">Main Project</h2>
-                <p class="sub_title">Design/Construction</p>
                 <div class="peo_boxes">
                     <div  data-aos="fade-down" data-aos-delay="100" data-aos-duration="1200" class="box">
                         <img src="/portimg/intro2.jpg">
@@ -272,7 +265,10 @@
         </div>
     </div>
     <%- include ("common/footer.ejs")%>
+
+
     <script src="/js/intro.js"></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

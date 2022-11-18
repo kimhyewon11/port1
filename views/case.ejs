@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include ("common/header.ejs",{menu:"case"})%>
+    <div id="container">
+        <div class="center">
+            <div class="topwrap">
+                <h2 class="case_title">Cases</h2>
+                <ul class="casebtns">
+                    <li class="on" data-filter="*" ><a href="#">All</a></li>
+                    <li data-filter=".apartment" ><a href="#">Apartment</a></li>
+                    <li data-filter=".villa" ><a href="#">Villa</a></li>
+                    <li data-filter=".residence" ><a href="#">Residence</a></li>
+                    <li data-filter=".office" ><a href="#">Office</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="box all office">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso1.jpg">
+                    </div>
+                    <p class="cont_title">layered architexts.</p>
+                </div>
+                <div class="box all residence">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso2.jpg">
+                    </div>                    
+                    <p class="cont_title">paju.</p>
+                </div>
+                <div class="box all residence">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso3.jpg">
+                    </div>
+                    <p class="cont_title">geoje.</p>
+                </div>
+                <div class="box all residence">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso4.jpg">
+                    </div>                    
+                    <p class="cont_title">Geumma.</p>
+                </div>
+                <div class="box all villa">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso5.jpg">
+                    </div>
+                    <p class="cont_title">pyeongtaek.</p>
+                </div>
+                <div class="box all villa">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso6.jpg">
+                    </div>
+                    <p class="cont_title">Hwaseong-2.</p>
+                </div>
+                <div class="box all apartment">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso7.jpg">
+                    </div>
+                    <p class="cont_title">Hoehyeon.</p>
+                </div>
+                <div class="box all apartment">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso8.jpg">
+                    </div>
+                    <p class="cont_title">echo city.</p>
+                </div>
+                <div class="box all office">
+                    <div class="imgwrap">
+                        <img src="/portimg/iso9.jpg">
+                    </div>
+                    <p class="cont_title">Magoak-3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ("common/footer.ejs")%>
+
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        //isopote API 사용방법
+        let elem = document.querySelector('.contents');
+        let iso = new Isotope( elem, {
+            // options
+            itemSelector: '.all',
+            // layoutMode: 'fitRows',
+            transitionDuration:'0.7s',
+            hiddenStyle: {
+                opacity: 0
+            },
+            visibleStyle: {
+                opacity: 1
+            }
+        });
+
+        //메뉴를 클릭시 정렬기능 실행
+        const btns = document.querySelectorAll(".casebtns li");
+
+        btns.forEach(function(item,index){
+
+            item.addEventListener("click",function(e){
+
+                e.preventDefault();// a태그가 가지고 있는 페이지 이동기능 중지
+                //클릭한 메뉴의 data-filter 속성값을 담아줄 변수
+                let attrValue = item.getAttribute("data-filter");
+                
+                //정렬기능 객체가 들어가있는 iso 변수에 -> 기능을 실행시키자
+                iso.arrange({
+                    filter:attrValue
+                });
+
+                //클릭한 메뉴만 활성화 나머지는 비활성화
+                btns.forEach(function(menu,index){
+                    menu.classList.remove("on");
+                });
+
+                item.classList.add("on");
+
+            });
+
+        });
+    </script>
+</body>
+</html>

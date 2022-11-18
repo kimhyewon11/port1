@@ -20,6 +20,8 @@ readMore.addEventListener("click",function(e){
     }
 });
 
+
+
 //cont4 슬라이드 기능 
 const view = document.querySelector(".view");
 const circlebtn = document.querySelectorAll(".cir");

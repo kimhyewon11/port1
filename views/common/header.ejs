@@ -21,40 +21,39 @@
     </div>
     <div class="h_bot">
         <div class="center">
-            <h1 class="logo"><a href="/">Housy</a></h1>
+            <h1 class="logo"><a href="/">ㄱㄱㄱ_</a></h1>
             <ul class="gnb">
-                <li ><a href="/" class="<%- menu === "index" ? "on" : null %>">Home<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
-                <li><a href="#">Cases<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
-                <li><a href="#">Brend<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
+                <li><a href="/case" class="<%- menu === "case" ? "on" : null %>">Cases<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
+                <li><a href="/brand" class="<%- menu === "brand" ? "on" : null %>">Brend<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
                 <li><a href="/intro" class="<%- menu === "intro" ? "on" : null %>">About<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
                 <li><a href="/blog" class="<%- menu === "blog" ? "on" : null %>">News<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
                 <li><a href="/brdlist" class="<%- menu === "brdlist" ? "on" : null %>">Contact<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
             </ul>
             <div class="subMenu">
                 <span class="one"></span>
-                <span class="two"></span>
                 <span class="three"></span>
             </div>
-            <ul class="subgnb">
-                <li ><a href="/">Index</a></li>
-                <li><a href="#">Properties</a></li>
-                <li><a href="#">Agents</a></li>
-                <li><a href="/intro">pages</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/brdlist">Board</a></li>
-            </ul>
-            <div class="condition_m">
-                <% if(!userdata) {%>
-                    <ul class="log">
-                        <li><a href="/login"><span class="material-symbols-outlined">login</span>Login</a></li>
-                        <li><a href="/join"><span class="material-symbols-outlined">how_to_reg</span>Register</a></li>
-                    </ul>
-                <% } else {%>
-                    <ul class="log">
-                        <li><a href="/mypage"><%-userdata.joinname%>님</a></li>
-                        <li><a href="/logout"><span class="material-symbols-outlined">how_to_reg</span>Logout</a></li>
-                    </ul>
-                <% } %>
+            <div class="subgnbwrap">
+                <ul class="subgnb">
+                    <li><a href="/case">Cases</a></li>
+                    <li><a href="/brand">Brend</a></li>
+                    <li><a href="/intro">About</a></li>
+                    <li><a href="/blog">News</a></li>
+                    <li><a href="/brdlist">Contact</a></li>
+                </ul>
+                <div class="condition_m">
+                    <% if(!userdata) {%>
+                        <ul class="log">
+                            <li><a href="/login"><span class="material-symbols-outlined">login</span>Login</a></li>
+                            <li><a href="/join"><span class="material-symbols-outlined">how_to_reg</span>Register</a></li>
+                        </ul>
+                    <% } else {%>
+                        <ul class="log">
+                            <li><a href="/mypage"><%-userdata.joinname%>님</a></li>
+                            <li><a href="/logout"><span class="material-symbols-outlined">how_to_reg</span>Logout</a></li>
+                        </ul>
+                    <% } %>
+                </div>
             </div>
         </div>
     </div>

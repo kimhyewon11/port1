@@ -16,7 +16,7 @@ prevbtn.addEventListener("click",function(){
 //슬라이드 2초마다 넘어감
 let slides = setInterval(function(){
     nextSlides();
-},2000);
+},3000);
 
 //마우스 올리면 멈춤 
 mainview.addEventListener("mouseenter",function(){
@@ -26,7 +26,7 @@ mainview.addEventListener("mouseenter",function(){
 mainview.addEventListener("mouseleave",function(){
     slides = setInterval(function(){
         nextSlides();
-    },2000);
+    },3000);
 });
 
 

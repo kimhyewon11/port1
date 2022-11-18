@@ -43,7 +43,7 @@
                     .bg { 
                         width: 100%;
                         height: 100%;
-                        background-color: rgba(0,0,0, 0.2);
+                        background-color: rgba(0,0,0, 0.1);
                     }
                     >.textWrap { 
                         width: 33%;
@@ -103,11 +103,11 @@
                     }
                 }
                 .next { 
-                    right: -60px;
+                    right: -50px;
                     cursor: pointer;
                 }
                 .prev {
-                    left: -60px;
+                    left: -50px;
                     text-align: center;
                     cursor: pointer;
                     >span {
@@ -121,7 +121,6 @@
         
     }
     .main_cont2 { 
-        background-color: #efefef;
         display: flex;
         justify-content: center;
         .center { 
@@ -145,7 +144,10 @@
                 display: flex;
                 justify-content: center;
                 padding: 10px;
+                width: 90%;
+                margin: 0 auto;
                 >.imgW {
+                    width: 45%;
                     height: 100%;
                     >img{
                         height:800px;
@@ -256,7 +258,7 @@
                 margin-bottom: 100px;
             }
             >.slider { 
-                width:90%;
+                width:100%;
                 overflow: hidden;
                 margin: 0 auto;
                 .view { 
@@ -340,8 +342,8 @@
             .placeWrap { 
                 display: flex;
                 flex-wrap:wrap;
-                width: 1400px;
-                margin: 0 auto;
+                width: 78%;
+                margin: 100px auto 0 ;
                 .place { 
                     &:hover{
                         .placetextwrap {
@@ -349,11 +351,11 @@
                         }
                     }
                     &:nth-child(4) {
-                        width:800px ;
+                        width:64% ;
                     }
-                    width: 370px;
+                    width: 31%;
                     height: 250px;
-                    margin:0 30px 30px;
+                    margin:0 1% 30px;
                     position: relative;
                     overflow: hidden;
                     img { 
@@ -441,7 +443,7 @@
         display: flex;
         justify-content: center;
         .center {
-            width: 70%;
+            width: 80%;
             padding: 100px 0;
             .title { 
                 font-size: 40px;
@@ -461,13 +463,14 @@
                 border-top: 1px solid #ddd;
                 border-bottom: 1px solid #ddd;
                 .person_box { 
-                    width: 255px;
-                    margin: 0 20px;
+                    width: 20%;
+                    margin: 0 1%;
+                    text-align: center;
                     >.imgWrap {
                         overflow: hidden;
                         padding: 20px ;
                         >img { 
-                            width:160px;
+                            width:60%;
                             height: 160px;
                             transition: all 0.5s;
                             overflow:hidden ;
@@ -488,7 +491,7 @@
                         color: #666;
                         margin-bottom: 25px;
                         line-height: 30px;
-                        height: 100px;
+                        height: 130px;
                     }
 
                     .iconWrap { 
@@ -507,124 +510,38 @@
             }
         }
     }
-    .main_cont7 { 
-        background-image:url(/portimg/banner.jpg) ;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        .bg { 
-            display: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0, 0.3 );
-        }
-        .center { 
-            z-index: 99;
-            width: 85%;
-            padding: 100px 0;
-            .title { 
-                font-size: 40px;
-                color: #000;
-                margin-bottom: 40px;
-                border-bottom: 1px solid #555;
-                padding: 0 0 25px 10px;
-            }
-            .sub_title { 
-                font-size: 15px;
-                color: #000;
-                margin-bottom: 130px;
-                padding-left: 10px;
-            }
-            .reviewWrap  {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 150px;
-                width: 85%;
-                margin: 0 auto;
-                .reviewbox { 
-                    width: 380px;
-                    background-color: #fff;
-                    border-radius: 5px;
-                    position: relative;
-                    text-align: center;
-                    border: 1px solid #ccc;
-                    img { 
-                        display: block;
-                        border-radius: 50%;
-                        width: 100px;
-                        height: 100px;
-                        position: absolute;
-                        top: -50px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
-                    .name { 
-                        margin: 80px 0 15px;
-                        font-size: 16px;
-                        font-weight: 500;
-                    }
-                    .starWrap { 
-                        display: flex;
-                        width: 180px;
-                        margin: 0 auto 20px;
-                        span { 
-                            display: block;
-                            color: #ffa500;
-                            font-size: 15px;
-                        }
-                        .review { 
-                            color: #555;
-                            margin-left: 5px;
-                        }
-                    }
-                    .context { 
-                        font-size: 14px;
-                        line-height: 25px;
-                        color: #555;
-                        margin:0 20px 37px;
-                    }
-                }
-            }
-        }
-    }
     .main_cont8 { 
         display: flex;
         justify-content: center;
-        .center { 
-            width: 87%;
+        >.center { 
+            width: 90%;
             padding: 100px 0 150px;
             .title { 
                 font-size: 40px;
-                margin-bottom: 40px;
+                font-weight: 500;
+                margin-bottom: 80px;
                 border-bottom: 1px solid #555;
                 padding: 0 0 25px 10px;
-            }
-            .sub_title { 
-                font-size: 15px;
-                margin-bottom: 100px;
-                padding-left:10px ;
             }
             .blogboxWrap {
                 display: flex;
                 justify-content: space-between;
-                width: 85%;
+                width: 95%;
                 margin: 0 auto;
                 .blogWrap { 
-                    width: 420px;
+                    width: 30%;
                     border: 1px solid #efefef;
                     position: relative;
                     .imgWrap { 
                         img {
                             width: 100%;
+                            height: 320px;
                         }
                         .dateWrap { 
                             position: absolute;
                             top: 20px;
                             right: 20px;
-                            background-color: #274aba;
+                            background-color: #c7c7c7;
                             border-radius: 5px;
                             padding: 8px 15px;
                             >p {
@@ -654,15 +571,12 @@
                         background-color: #f4f4f4;
                         align-items: center;
                         line-height: 45px;
-                        .name { 
-                            font-size: 13px;
-                            margin-left: 100px;
-                            color: #555;
-                        }
+                       
                         span { 
                             color: #555;
                             font-size: 16px;
-                            margin-left: 20px;
+                            margin:12px 0 12px 20px  ;
+                            
                         }
                     }
                     .b_title { 

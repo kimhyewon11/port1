@@ -1,13 +1,14 @@
 #container {  
     .mypage_cont { 
         width: 740px;
-        border: 1px solid #eee;
         margin: 100px auto;
         padding: 50px 30px;
         .title { 
-            text-align: center;
-            margin: 0 0 50px ;
-            font-size: 25px;
+            margin: 0 0 80px ;
+            font-size: 40px;
+            font-weight: 500;
+            border-bottom:1px solid #555 ;
+            padding-bottom: 20px;
         }
         form { 
             .Wrap {
@@ -20,9 +21,10 @@
                 }
                 input { 
                     width: 90%;
-                    border: 1px solid #eee;
+                    border-bottom: 1px solid #c7c7c7;
                     line-height:40px;
                     padding-left:20px ;
+                    margin-bottom: 15px;
                 }
                 textarea { 
                     height: 150px;
@@ -30,7 +32,7 @@
                     resize: none;
                     width: 90%;
                     padding-left:20px ;
-                    border: 1px solid #eee;
+                    border: 1px solid #c7c7c7;
                 }
               
             }
@@ -38,10 +40,16 @@
                 display: block;
                 width: 165px;
                 line-height: 50px;
-                background-color: #274abb ;       
-                border: none;
+                background-color: #fff ;       
+                border: 1px solid #c7c7c7;
                 text-align: center; 
-                color: #fff;
+                color: #555;
+                margin: 50px auto 0;
+                transition: all 0.5s;
+                &:hover { 
+                    background-color: #555;
+                    color: #fff;
+                }
             }
         }
     }

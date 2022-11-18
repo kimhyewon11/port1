@@ -47,6 +47,12 @@ app.get("/intro",function(req,res){
 app.get("/join",function(req,res){
     res.render("join",{userdata:req.user});
 });
+app.get("/case",function(req,res){
+    res.render("case",{userdata:req.user});
+});
+app.get("/brand",function(req,res){
+    res.render("brand",{userdata:req.user});
+});
 
 
 app.post("/memberjoin",function(req,res){
@@ -128,6 +134,7 @@ passport.use(new LocalStrategy({
 
 app.get("/mypage",function(req,res){
     res.render("mypage",{userdata:req.user});
+    console.log(req.user)
 });
 
 app.post("/myupdate",function(req,res){

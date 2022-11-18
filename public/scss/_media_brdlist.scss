@@ -3,11 +3,11 @@
     #container { 
         .brdlist_cont2 {
             .center {
-                width: 80%;
                 .boxes { 
                     .box {
-                        width: 290px;
+                        width: 31%;
                         height: 100%;
+
                         .imgs { 
                             height: 195px;
                         }
@@ -23,13 +23,11 @@
     #container { 
         .brdlist_cont2 {
             .center {
-                width: 71%;
                 .boxes { 
                     .box {
-                        width: 330px;
-                        height: 100%;
+                        width: 48%;
                         .imgs { 
-                            height: 220px;
+                            height: 240px;
                         }
                     }
                 }
@@ -43,14 +41,28 @@
     #container { 
         .brdlist_cont2 {
             .center {
-                width: 68%;
                 .boxes { 
                     .box {
-                        width: 510px;
-                        height: 100%;
+                        width: 90%;
+                        margin: 0 auto 50px;
                         .imgs { 
                             height: 340px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:580px)
+{
+    #container { 
+        .brdlist_cont2 {
+            .center {
+                width: 95%;
+                .boxes { 
+                    .box {
+                        width: 95%;
                     }
                 }
             }

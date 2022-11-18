@@ -4,7 +4,7 @@
         display: flex;
         justify-content: center;
         .center { 
-            width: 1120px;
+            width: 90%;
             .log { 
                 display: flex;
                 width:200px ;
@@ -33,16 +33,17 @@
         display: flex;
         justify-content: center;
         .center { 
-            width: 85%;
+            width: 90%;
             display: flex;
             justify-content: space-between;
             position: relative;
             .logo { 
-                margin-right: 60px;
-                line-height: 90px;
+
+                line-height: 100px;
                 a { 
-                    font-size: 23 px;
+                    font-size: 40px;
                     color: #000;
+                    font-weight: 500;
                 }
             }
             .gnb { 
@@ -50,15 +51,15 @@
                 justify-content: space-between;
                 
                 li {
-                    line-height: 90px;
-                    margin:0 40px ;
+                    line-height: 100px;
+                    margin:0 70px ;
                     &:last-child {
-                        margin: 0;
+                        margin-right:0 ;
                     }
                     >a { 
                         display: block;
                         color: #000;
-                        font-size: 18px; 
+                        font-size: 20px; 
                         width: 100%;
                         position: relative;
                         &::after {
@@ -68,7 +69,7 @@
                             height: 1px;
                             background-color: #000;
                             position: absolute;
-                            top: 58px;
+                            top: 61px;
                             left: 0;
                             transition: all 0.5s;
 
@@ -83,14 +84,7 @@
                             color: #000;
                             font-weight: 500;
                             &::after {
-                                content: "";
-                                display: block; 
                                 width: 105%;
-                                height: 1px;
-                                background-color: #000;
-                                position: absolute;
-                                top: 58px;
-                                left: 0;
                             }
                          }
                     }
@@ -103,7 +97,7 @@
                             height: 1px;
                             background-color: #000;
                             position: absolute;
-                            top: 58px;
+                            top: 61px;
                             left: 0;
                         }
                             span { color: #fff;}
@@ -111,23 +105,8 @@
                 }
                 
             }
-            .subMenu.on { 
-                .one { 
-                    rotate: 45deg;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                .two  {
-                    display: none;
-                    
-                }
-                .three { 
-                    
-                    rotate: 135deg;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
+            
+
             .subMenu { 
                 display: none;
                 position: absolute;
@@ -138,73 +117,98 @@
                 height: 25px;
                 >span { 
                     transition: all 0.5s;
-                    font-size: 20px;
                     position: absolute;
                     width: 35px;
-                    height: 2px;
-                    background-color: #555;
+                    height: 1px;
+                    background-color: #000;
                 }
                 .one { 
-                    top: 0;
+                    top: 10px;
                 }
-                .two  {
-                    top: 50%;
-                    transform: translateY(-50%);
-                    
-                }
+               
                 .three { 
                     bottom: 1px;
                 }
             }
-            .subgnb { 
+            .subMenu.on { 
+                .one { 
+                    rotate: 45deg;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .three { 
+                    rotate: -45deg;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    bottom: 12px;
+                }
+            }
+            .subgnbwrap { 
                 position: absolute;
                 top: 89px;
-                left: 0;
+                right:-22%;
                 background-color: #fff;
-                width: 100%;
-                height: 0;
+                width:0%;
                 z-index: 99;
-                display: flex;
                 margin: 0 auto;
-                border-top: 1px solid #eee;
                 overflow: hidden;
                 transition: all 0.5s;
-                > li { 
-                    margin: 0 35px;
-                    line-height: 60px;
-                    a {
-                        color: #000;
-                        font-weight: 500;
-                        font-size: 15px;
-                        &:hover { 
-                            color: #274abb;
+                height: 882px;
+                .subgnb { 
+                 
+                    > li { 
+                        margin: 30px 25px;
+                        line-height: 60px;
+                        a {
+                            color: #000;
+                            font-size: 18px; 
+                            position: relative;
+                            &::after {
+                                content: "";
+                                display: block; 
+                                width: 0%;
+                                height: 1px;
+                                background-color: #000;
+                                position: absolute;
+                                bottom: -5px;
+                                left: 0;
+                                transition: all 0.5s;
+                            }
+                            &:hover {
+                                color: #000;
+                                font-weight: 500;
+                                &::after {
+                                   
+                                    width: 105%;
+                                    
+                                }
+                             }
                         }
                     }
                 }
-            }
-            .subgnb.on { 
-                height: 60px;
-            }
-            .condition_m { 
-                display: none;
-                position: absolute;
-                right: -100px;
-                top: 50%;
-                transform: translateY(-50%);
-                .log {
-                    li { 
-                        line-height: 30px;
-                        a {
-                            font-size: 14px;
-                            color: #000;
-                            font-weight: 500;
-                            span { 
-                                font-size: 15px;
-                                margin-right: 5px;
+                
+                .condition_m { 
+                    display: flex;
+                    .log {
+                        display: flex;
+                        margin-top: 40px;
+                        padding-left:10px ;
+                        li { 
+                            margin: 0 20px;
+                            a {
+                                font-size: 14px;
+                                color: #000;
+                                font-weight: 500;
+                                span { 
+                                    display: none;
+                                }
                             }
                         }
                     }
                 }
+            }
+            .subgnbwrap.active { 
+                width: 50%;
             }
         }
     }

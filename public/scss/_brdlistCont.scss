@@ -1,14 +1,16 @@
 .brdlist_cont2 { 
     display: flex;
     justify-content: center;
+    margin-top: 100px;
     .title { 
         font-size: 40px;
-            margin-bottom: 130px;
-            border-bottom: 1px solid #555;
-            padding: 0 0 25px 10px;
+        margin-bottom: 100px;
+        border-bottom: 1px solid #555;
+        padding: 0 0 25px 10px;
+        font-weight: 500;
     }
     .center {
-        width: 87%;
+        width: 90%;
         margin: 100px 0;
         .total { 
             font-size: 14px;
@@ -58,9 +60,9 @@
             justify-content: space-between;
             .box {
                 border: 1px solid #eee;
-                width: 350px;
+                width: 23%;
                 height: 370px;
-                margin-bottom: 30px;
+                margin-bottom: 50px;
                 .imgWrap  {
                     overflow: hidden;
                     .imgs,.noimg { 
@@ -68,7 +70,7 @@
                         height: 230px;
                         transition: all 0.5s;
                         &:hover {
-                            scale: 1.2;
+                            scale: 1.1;
                         }
                     }
                     .noimg { 

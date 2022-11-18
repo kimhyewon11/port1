@@ -3,14 +3,14 @@
     justify-content: center;
     padding: 160px 0;
     border-top: 1px solid #eee;
-    .center { 
-        width: 960px;
+    .join_center { 
+        width: 50%;
         .boxWrap { 
-            width: 960px;
+            width: 100%;
             border: 1px solid #eee;
             display: flex;
             .box1 { 
-                width: 470px;
+                width: 50%;
                 border-right: 1px solid #eee;
                 h2 { 
                     margin: 80px 0 20px;
@@ -24,6 +24,8 @@
                     width: 190px;
                     border: 1px solid #eee;
                     border-radius: 50px;
+                    overflow: hidden;
+
                     a { 
                         display: block;
                         text-align: center;
@@ -37,13 +39,13 @@
                         border-right:1px solid #eee ;
                     }
                     .log.on { 
-                        color: #274aba;
-                        font-weight: 500;
+                        background-color: #c7c7c7;
+                        color: #fff;
 
                     }
                     .joinbtn.on { 
-                        color: #274aba;
-                        font-weight: 500;
+                        background-color: #c7c7c7;
+                        color: #fff;
                     }
                 }
                 
@@ -74,17 +76,19 @@
                         button { 
                             border-radius: 50px;
                             width: 48%;
-                            background-color: #274aba;
-                            color: #fff;
+                            background-color: #fff;
+                            color: #3c3a3b;
                             line-height: 40px;
                             text-align: center;
-                            border: none;
+                            border: 1px solid #efefef;
                             font-size: 14px;
-                           
+                            transition: all 0.5s;
+                           &:hover { 
+                                background-color: #555;
+                                color: #fff;
+                           }
                         }
-                        #cancelbtn { 
-                            background-color: #aaa;
-                        }
+                        
                     }
                    
                 }
@@ -107,9 +111,9 @@
                 }
             }
             .box2 { 
-                width: 490px;
+                width: 50%;
                 height:627px;
-                background-image: url(/img/phone.jpg);
+                background-image: url(/portimg/banner.jpg);
                 background-size: cover;
                 position: relative;
                 .bg { 
@@ -118,15 +122,15 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0,0,0, 0.6);
+                    background-color: rgba(0,0,0, 0.4);
                 }
                 .textWrap { 
-                    border: 10px solid #3c3a3b;
-                    background-color: rgba(0,0,0, 0.7);
+                    border: 5px solid #3c3a3b;
+                    background-color: rgba(0,0,0, 0.4);
                     padding:30px 30px 90px;
                     .top { 
                         font-size: 17px;
-                        margin-bottom: 24px;
+                        margin:50px 0 24px;
                     }
                 }
             }

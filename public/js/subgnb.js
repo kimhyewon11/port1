@@ -1,8 +1,8 @@
 
-const subgnb = document.querySelector(".subgnb");
 const subMenu = document.querySelector(".subMenu");
+const subgnbwrap = document.querySelector(".subgnbwrap");
 
 subMenu.addEventListener("click",function(){
-    subgnb.classList.toggle("on");
     subMenu.classList.toggle("on");
+    subgnbwrap.classList.toggle("active");
 });
